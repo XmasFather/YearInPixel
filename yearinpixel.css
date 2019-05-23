@@ -102,7 +102,7 @@ header{
 }
 
  /*CALENDRIER*/
-#zone- calendrier{
+#zone-calendrier{
   grid-area: cal;
 }
 
@@ -151,5 +151,19 @@ footer{
   grid-area: footer;
 	width: 100%;
 	padding: 10px;
-	margin-top: 50px; 
+	margin-top: 50px;
+}
+
+/*@MEDIAS*/
+
+@media screen and (min-width: 580px){
+  body{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "header header"
+                         "cal info"
+                         "footer footer";
+  }
+}
 }
