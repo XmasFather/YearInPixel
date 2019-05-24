@@ -60,4 +60,38 @@ function infoCouleurs(){
   }
   echo "</ul> \n";
 }
+
+function connexionBDD(){
+  $DBhost  = "marolleaznyip1.mysql.db:3306";
+  $DBowner = "marolleaznyip1";
+  $DBpw    = "YearInPixel1";
+  $DBName  = "marolleaznyip1";
+
+// ******  Configuration - Fin ******
+
+ $DBconnect = "mysql:dbname=".$DBName.";host=".$DBhost;
+
+
+  try{
+     $pdo = new PDO($DBconnect, $DBowner, $DBpw);
+     }
+
+  catch (PDOException $e)
+
+     {
+     $DBhost  = "localhost";
+     $DBowner = "root";
+     $DBpw    = "";
+     $DBName  = "test";
+     $DBconnect = "mysql:dbname=".$DBName.";host=".$DBhost;
+     try {
+       $pdo = new PDO($DBconnect, $DBowner, $DBpw);
+
+     } catch (PDOException $e) {
+       echo "Connexion échouée : <font color=green><b>" . $e->getMessage()."</b></font> <br> \n";
+     }
+
+
+     }
+}
  ?>
