@@ -46,13 +46,13 @@ function getmicrotime()
 
 // ******  Configuration - Debut ******
 
-   $DBhost  = "localhost";   // Par exemple
+   $DBhost  = "marolleaznyip1.mysql.db:3306";   // Par exemple
 
    $DBowner = "marolleaznyip1";  // ton login SQL
 
    $DBpw    = "YearInPixel1";  // ton password SQL
 
-   $DBName  = "user";
+   $DBName  = "marolleaznyip1";
 
 // ******  Configuration - Fin ******
 
