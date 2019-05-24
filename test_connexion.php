@@ -44,8 +44,6 @@
 
       } catch (PDOException $e) {
         echo "Connexion échouée : <font color=green><b>" . $e->getMessage()."</b></font> <br> \n";
-
-        echo "<br>";  // Ligne de séparation
       }
 
 
