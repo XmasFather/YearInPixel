@@ -13,6 +13,18 @@
       <p>Ceci est le header</p>
     </header>
 
+    <span class="cache">    </span>
+
+    <nav class="popup">
+      <h2>Choisissez votre humeur</h2>
+      <span>
+        <div class="small_square color_1"></div>
+        <div class="small_square color_2"></div>
+        <div class="small_square color_3"></div>
+        <div class="small_square color_4"></div>
+      </span>
+    </nav>
+
     <section id="zone-calendrier">
       <?php calendrier();?>
     </section>
@@ -32,6 +44,11 @@
       $('#calendrier .case').addClass('color_0');
 
       $('#calendrier .case').on('click',function(){
+        
+        var cettecase = $(this);
+
+        $('.cache').show();
+        $('.popup').show();
         var classe = $(this).attr('class');
         var temp = classe.split("_");
 
@@ -48,7 +65,31 @@
         $(this).removeClass();
         $(this).addClass('case');
         $(this).addClass(nouvelle_classe);
+
+        $('.popup span div').on('click',function(){
+          $('.cache').hide();
+          $('.popup').hide();
+        })
+        $('.popup span div:nth-child(1)').on('click',function(){
+          $(cettecase).addClass("color_1");
+        })
+        $('.popup span div:nth-child(2)').on('click',function(){
+          $(cettecase).addClass("color_2");
+        })
+        $('.popup span div:nth-child(3)').on('click',function(){
+          $(cettecase).addClass("color_3");
+        })
+        $('.popup span div:nth-child(4)').on('click',function(){
+          $(cettecase).addClass("color_4");
+        })
+        
       })
+
+      $('.cache').on('click',function(){
+        $('.cache').hide();
+        $('.popup').hide();
+      })
+
     </script>
   </body>
 </html>
