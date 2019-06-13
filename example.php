@@ -22,6 +22,8 @@
         <div class="small_square color_2"></div>
         <div class="small_square color_3"></div>
         <div class="small_square color_4"></div>
+        <div class="small_square color_5"></div>
+        <div class="small_square color_6"></div>
       </span>
     </nav>
 
