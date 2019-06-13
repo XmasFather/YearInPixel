@@ -49,12 +49,12 @@
 
         $('.cache').show();
         $('.popup').show();
-        /*
+
         var classe = $(this).attr('class');
         var temp = classe.split("_");
 
         classe = parseInt(temp[1], 10);
-
+        /*
         if(classe < 6 ){
           classe++;
         }
