@@ -61,9 +61,9 @@
         else{
           classe = 1;
         }
-
-        var nouvelle_classe = "color_"+classe.toString();
         */
+        var nouvelle_classe = "color_"+classe.toString();
+
         $(this).removeClass();
         $(this).addClass('case');
         $(this).addClass(nouvelle_classe);
