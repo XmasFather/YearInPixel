@@ -44,11 +44,12 @@
       $('#calendrier .case').addClass('color_0');
 
       $('#calendrier .case').on('click',function(){
-        
+
         var cettecase = $(this);
 
         $('.cache').show();
         $('.popup').show();
+        /*
         var classe = $(this).attr('class');
         var temp = classe.split("_");
 
@@ -62,6 +63,7 @@
         }
 
         var nouvelle_classe = "color_"+classe.toString();
+        */
         $(this).removeClass();
         $(this).addClass('case');
         $(this).addClass(nouvelle_classe);
@@ -71,18 +73,19 @@
           $('.popup').hide();
         })
         $('.popup span div:nth-child(1)').on('click',function(){
-          $(cettecase).addClass("color_1");
+          $(cettecase).removeClass();
+          $(cettecase).addClass("case color_1");
         })
         $('.popup span div:nth-child(2)').on('click',function(){
-          $(cettecase).addClass("color_2");
+          $(cettecase).addClass("case color_2");
         })
         $('.popup span div:nth-child(3)').on('click',function(){
-          $(cettecase).addClass("color_3");
+          $(cettecase).addClass("case color_3");
         })
         $('.popup span div:nth-child(4)').on('click',function(){
-          $(cettecase).addClass("color_4");
+          $(cettecase).addClass("case color_4");
         })
-        
+
       })
 
       $('.cache').on('click',function(){
