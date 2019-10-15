@@ -49,38 +49,79 @@ table {
 
 /************************************************************************/
 
+/*FONTS*/
+@font-face{
+	font-family: "Minecraft";
+	src: url(Minecraft.ttf);
+}
+
+/*COULEURS*/
+
+:root{
+	--color-0: #ffffff;
+	--color-1: #FF9FBB;
+	--color-2: #E1C4FF;
+	--color-3: #8BF9D0;
+	--color-4: #FF8181;
+	--color-5: #FFC84A;
+	--color-6: #98FFFF;
+}
+
 /*HUMEURS*/
 
 .humeur-0{
-  background-color: #ffffff;
+  background-color: var(--color-0);
 }
 
 .humeur-1{
-  background-color: #006400 ;
+  background-color: var(--color-1);
 }
 
 .humeur-2{
-  background-color: #00ff00 ;
+  background-color: var(--color-2);
 }
 
 .humeur-3{
-  background-color: #0000ff ;
+  background-color: var(--color-3);
 }
 
 .humeur-4{
-  background-color: #ffff00 ;
+  background-color: var(--color-4);
 }
 
 .humeur-5{
-  background-color: #ffa500 ;
+  background-color: var(--color-5);
 }
 
 .humeur-6{
-  background-color: #ff0000 ;
+  background-color: var(--color-6);
 }
-/*CORPS DE MENAGE*/
-/*HEADER*/
 
+/**/
+
+/*CORPS DE PAGE*/ /*Mobile First*/
+body{
+	background-color: #000000;
+	color: #FFFFFF;
+	font-family: sans-serif;
+}
+/*HEADER*/
+.header-principal{
+	height: 100px;
+}
+
+h1{
+	font-family: Minecraft;
+	font-size: 3em;
+	width: 500px;
+	margin: auto;
+	text-align: center;
+}
 /*FOOTER*/
 
 /*MAIN*/
+	/*Header du main*/
+
+	/*Calendrier*/
+
+	/*Liste humeur*/
