@@ -69,31 +69,31 @@ table {
 
 /*HUMEURS*/
 
-.humeur-0{
+.couleur-0{
   background-color: var(--color-0);
 }
 
-.humeur-1{
+.couleur-1{
   background-color: var(--color-1);
 }
 
-.humeur-2{
+.couleur-2{
   background-color: var(--color-2);
 }
 
-.humeur-3{
+.couleur-3{
   background-color: var(--color-3);
 }
 
-.humeur-4{
+.couleur-4{
   background-color: var(--color-4);
 }
 
-.humeur-5{
+.couleur-5{
   background-color: var(--color-5);
 }
 
-.humeur-6{
+.couleur-6{
   background-color: var(--color-6);
 }
 
