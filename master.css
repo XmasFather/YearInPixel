@@ -46,3 +46,41 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/************************************************************************/
+
+/*HUMEURS*/
+
+.humeur-0{
+  background-color: #ffffff;
+}
+
+.humeur-1{
+  background-color: #006400 ;
+}
+
+.humeur-2{
+  background-color: #00ff00 ;
+}
+
+.humeur-3{
+  background-color: #0000ff ;
+}
+
+.humeur-4{
+  background-color: #ffff00 ;
+}
+
+.humeur-5{
+  background-color: #ffa500 ;
+}
+
+.humeur-6{
+  background-color: #ff0000 ;
+}
+/*CORPS DE MENAGE*/
+/*HEADER*/
+
+/*FOOTER*/
+
+/*MAIN*/
