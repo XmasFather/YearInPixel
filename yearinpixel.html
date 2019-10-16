@@ -14,13 +14,18 @@
   </header>
   <main>
     <header class="header-main">
-      <nav>
-        <ul>
-          <li>Affichage Mois</li>
-          <li>Affichage Année</li>
-        </ul>
+      <nav role="navigation">
+        <div id="menuToggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul id="menu">
+            <a href="#"><li>Affichage Mois</li></a>
+            <a href="#"><li>Affichage Année</li></a>
+          </ul>
+        </div>
       </nav>
-      <h2>Mois</h2>
     </header>
     <!--Mois ou année géneré à partir du changement -->
     <section class="calendrier mois" id="janvier">
