@@ -67,35 +67,64 @@ table {
 	--color-6: #98FFFF;
 }
 
-/*HUMEURS*/
-
 .couleur-0{
-  background-color: var(--color-0);
+  color: var(--color-0);
 }
 
 .couleur-1{
-  background-color: var(--color-1);
+  color: var(--color-1);
 }
 
 .couleur-2{
-  background-color: var(--color-2);
+  color: var(--color-2);
 }
 
 .couleur-3{
-  background-color: var(--color-3);
+  color: var(--color-3);
 }
 
 .couleur-4{
-  background-color: var(--color-4);
+  color: var(--color-4);
 }
 
 .couleur-5{
-  background-color: var(--color-5);
+  color: var(--color-5);
 }
 
 .couleur-6{
-  background-color: var(--color-6);
+  color: var(--color-6);
 }
+
+/*HUMEURS*/
+
+.couleur-humeur-0{
+	background-color: var(--color-0);
+  }
+  
+  .couleur-humeur-1{
+	background-color: var(--color-1);
+  }
+  
+  .couleur-humeur-2{
+	background-color: var(--color-2);
+  }
+  
+  .couleur-humeur-3{
+	background-color: var(--color-3);
+  }
+  
+  .couleur-humeur-4{
+	background-color: var(--color-4);
+  }
+  
+  .couleur-humeur-5{
+	background-color: var(--color-5);
+  }
+  
+  .couleur-humeur-6{
+	background-color: var(--color-6);
+  }
+
 
 /**/
 
@@ -114,7 +143,7 @@ h1{
 	font-family: Minecraft;
 	font-size: 3em;
 	width: 500px;
-	margin: auto;
+	margin: 20px auto;
 	text-align: center;
 }
 /*FOOTER*/
