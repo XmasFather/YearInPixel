@@ -125,6 +125,11 @@ table {
 	background-color: var(--color-6);
   }
 
+.carre-couleur-humeur{
+	width: 10px;
+	height: 10px;
+}
+
 
 /**/
 
