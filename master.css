@@ -140,9 +140,16 @@ body{
 	background-color: #000000;
 	color: #FFFFFF;
 	font-family: sans-serif;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto auto auto;
+	grid-template-areas: "header"
+						 "main"
+						 "footer";
 }
 /*HEADER*/
 .header-principal{
+	grid-area: header;
 	height: 100px;
 }
 
@@ -156,14 +163,31 @@ h1{
 /*FOOTER*/
 
 footer{
+	grid-area: footer;
 	width: 100%;
 	height: 100px;
 	background-color: blue;
 }
 
 /*MAIN*/
+main{
+	grid-area: main;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto auto auto;
+	grid-template-areas: "header-main"
+						 "calendrier"
+						 "humeur";
+}
 	/*Header du main*/
-
+.header-main{
+	grid-area: header-main;
+}
 	/*Calendrier*/
-
+.calendrier{
+	grid-area: calendrier;
+}
 	/*Liste humeur*/
+.humeur{
+	grid-area: humeur;
+}
