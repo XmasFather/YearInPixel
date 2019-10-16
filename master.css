@@ -172,7 +172,7 @@ footer{
 	grid-area: footer;
 	width: 100%;
 	height: 50px;
-	background-color: blue;
+	text-align: center;
 }
 
 /*MAIN*/
@@ -188,7 +188,9 @@ main{
 	/*Header du main*/
 .header-main{
 	grid-area: header-main;
+	margin-bottom: 100px;
 }
+
 	/*Calendrier*/
 .calendrier{
 	grid-area: calendrier;
@@ -196,6 +198,14 @@ main{
 	/*Liste humeur*/
 .humeur{
 	grid-area: humeur;
+	min-width: 300px;
+	margin: auto;
+	margin-top: 400px;
+}
+
+.liste-humeur li{
+	font-size: 1.7em;
+	font-weight: bold;
 }
 
 /* Burger Menu*/
@@ -210,16 +220,6 @@ main{
  * prefixes.
  */
 
- body
- {
-   margin: 0;
-   padding: 0;
-   
-   /* make it look decent enough */
-   background: #232323;
-   color: #cdcdcd;
-   font-family: "Avenir Next", "Avenir", sans-serif;
- }
  
  a
  {
@@ -361,3 +361,66 @@ main{
  {
    transform: none;
  }
+
+ /*Grille générale*/
+
+.grille_principale {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	grid-template-rows: auto 1fr;
+	grid-template-areas: 
+	"sidebar header"
+    "sidebar calendrier";
+}
+
+.grille_principale li{
+	list-style-type: none;
+	border:solid;
+	border-width: 1px;
+	border-color:black;
+	line-height:10vh;
+	text-align:center;
+}
+
+.grille_principale ul{
+	margin:0;
+	padding:0;
+	height:10vh;
+}
+
+/*Grille Header*/
+
+.grille_principale ul:first-child{
+	grid-area: header;
+	display:grid;
+	grid-template-columns: repeat(7, 1fr) ;
+	
+}
+
+.grille_principale ul:nth-child(2){
+	grid-area: header;
+	display:grid;
+	grid-template-columns: repeat(12, 1fr) ;
+	display:none;
+}
+
+.grille_principale ul:first-child li{
+	background-color: #EEEEEE;
+}
+
+/*Grille Sidebar*/
+
+.grille_principale ul:nth-child(3){
+	grid-area: sidebar;
+	min-width: 50px;
+	display:none;
+}
+
+/*Grille Calendrier*/
+
+.grille_principale ul:nth-child(4){
+	display: grid;
+	grid-area: calendrier;
+	grid-template-columns: repeat(7, 1fr);
+	grid-template-rows: repeat(10, 10vh);
+}
