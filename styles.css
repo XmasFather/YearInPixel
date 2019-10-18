@@ -10,7 +10,7 @@ body{
 	grid-template-rows: auto 1fr;
 	grid-template-areas: 
 	"sidebar header"
-    "sidebar calendrier";
+    "sidebar jours";
 }
 
 .grille_principale li{
@@ -60,7 +60,7 @@ body{
 
 .grille_principale ul:nth-child(4){
 	display: grid;
-	grid-area: calendrier;
+	grid-area: jours;
 	grid-template-columns: repeat(7, 1fr);
 	grid-template-rows: repeat(10, 10vh);
 }
