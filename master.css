@@ -200,7 +200,6 @@ main{
 	grid-area: humeur;
 	min-width: 300px;
 	margin: auto;
-	margin-top: 400px;
 }
 
 .liste-humeur li{
@@ -385,7 +384,6 @@ main{
 .grille_principale ul{
 	margin:0;
 	padding:0;
-	height:10vh;
 }
 
 /*Grille Header*/
