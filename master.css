@@ -52,12 +52,18 @@ table {
 /*FONTS*/
 @font-face{
 	font-family: "Minecraft";
-	src: url(Minecraft.ttf);
+	src: url(fonts/Minecraft.ttf);
+}
+
+@font-face{
+	font-family: "VT323";
+	src: url(fonts/VT323-Regular.ttf);
 }
 
 /*COULEURS*/
 
 :root{
+	--color-background: #fff8ed;
 	--color-0: #ffffff;
 	--color-1: #FF9FBB;
 	--color-2: #E1C4FF;
@@ -143,9 +149,9 @@ html{
 /*CORPS DE PAGE*/ /*Mobile First*/
 body{
 	min-height: 100%;
-	background-color: #FFFFFF;
+	background-color: var(--color-background);
 	color: #333333;
-	font-family: sans-serif;
+	font-family: VT323, 	sans-serif;
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: auto 1fr auto;
