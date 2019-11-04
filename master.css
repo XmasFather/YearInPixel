@@ -62,17 +62,6 @@ table {
 
 /*COULEURS*/
 
-:root{
-	--color-background: #fff8ed;
-	--color-0: #ffffff;
-	--color-1: #FF9FBB;
-	--color-2: #E1C4FF;
-	--color-3: #8BF9D0;
-	--color-4: #FF8181;
-	--color-5: #FFC84A;
-	--color-6: #98FFFF;
-}
-
 .couleur-0{
   color: var(--color-0);
 }
