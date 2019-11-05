@@ -18,10 +18,11 @@
       <nav role="navigation">
         
       </nav>
+      <h2>Mois <--> Année</h2>
     </header>
     <!--Mois ou année géneré à partir du changement -->
     <section class="calendrier">
-      <ul class="nom-jours">
+      <ul id="nom-jours" class="">
         <li>L</li>
         <li>M</li>
         <li>M</li>
@@ -31,7 +32,7 @@
         <li>D</li>
       </ul>
     
-      <ul class="nom-mois">
+      <ul id="nom-mois" class="hide">
         <li>J</li>
         <li>F</li>
         <li>M</li>
@@ -46,7 +47,7 @@
         <li>D</li>
       </ul>
     
-      <ul class="numero-jour">
+      <ul id="numero-jours" class="hide">
         <li>rien</li>
         <li>1</li>
         <li>2</li>
@@ -81,7 +82,7 @@
         <li>31</li>
       </ul>
     
-      <ul class="liste-jours">
+      <ul id="liste-jours" class="mois">
         <li></li>
         <li></li>
         <li></li>
@@ -135,6 +136,18 @@
   <footer>
     <p>Proudly designed by Philaé, Myrial & Quentin in California</p>
   </footer>
+  <script>
+    function alerte(){
+      alert("Coucou");
+    }
 
+    var nomJours = document.getElementsByClassName("nom-jours");
+    var nomMois = document.getElementsByClassName("nom-mois");
+    var numeroJours = document.getElementsByClassName("numero-jours");
+    var listeJours = document.getElementsByClassName("liste-jours");
+    var affichage = "mois";
+
+    document.querySelector("h2").addEventListener('click', alerte);  
+  </script>
 </body>
 </html>

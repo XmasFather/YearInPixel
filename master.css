@@ -183,13 +183,91 @@ main{
 	/*Header du main*/
 .header-main{
 	grid-area: header-main;
-	margin-bottom: 100px;
+	margin-bottom: 30px;
+}
+
+.header-main h2{
+	margin-left: 10px;
+	font-size: 1.7em;
 }
 
 	/*Calendrier*/
 .calendrier{
 	grid-area: calendrier;
+	display: grid;
+	grid-template-columns: auto 1fr;
+	grid-template-rows: auto 1fr;
+	grid-template-areas: "numero-jours nom-mois-annee"
+						 "numero-jours liste-jours";
 }
+
+.calendrier li{
+	list-style-type: none;
+	border:solid;
+	border-width: 1px;
+	border-color:black;
+	line-height:10vh;
+	text-align:center;
+}
+
+.calendrier ul{
+	margin: 0;
+	padding: 0;
+}
+
+/*Entete du calendrier qui varie en fonction de l'affichage mois-année*/
+
+#nom-jours{
+	background-color: red;
+	grid-area: nom-mois-annee;
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+}
+
+#nom-mois{
+	background-color: blue;
+	grid-area: nom-mois-annee;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+}
+
+/*Liste des jours que l'on affiche en mode année et non en mode mois*/
+
+#numero-jours{
+	background-color: green;
+	grid-area: numero-jours;
+}
+
+/*Case du calendrier*/
+
+#liste-jours{
+	background-color: yellow;
+	grid-area: liste-jours;
+	display: grid;
+}
+
+#liste-jours.mois{
+	grid-template-columns: repeat(7, 1fr);
+	grid-template-rows: repeat(6, auto);
+}
+
+#liste-jours.mois li{
+	height: 10vh;
+}
+
+#liste-jours.annee{
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: repeat(31, auto);
+}
+
+
+
+/*Cacher les parties que nous n'avons pas besoin*/
+
+.hide{
+	display: none !important; 
+}
+
 	/*Liste humeur*/
 .humeur{
 	grid-area: humeur;
