@@ -137,17 +137,33 @@
     <p>Proudly designed by Philaé, Myrial & Quentin in California</p>
   </footer>
   <script>
-    function alerte(){
-      alert("Coucou");
+
+    function swap(){
+      var nomJours = document.getElementById("nom-jours");
+      var nomMois = document.getElementById("nom-mois");
+      var numeroJours = document.getElementById("numero-jours");
+      var listeJours = document.getElementById("liste-jours");
+      var affichage = listeJours.classList;
+
+      if(affichage=="mois"){
+        affichage = "annee";
+        nomJours.classList.add("hide");
+        nomMois.classList.remove("hide");
+        numeroJours.classList.remove("hide");
+        listeJours.classList.remove("mois");
+        listeJours.classList.add("annee");
+      }else{
+        affichage = "mois";
+        nomJours.classList.remove("hide");
+        nomMois.classList.add("hide");
+        numeroJours.classList.add("hide");
+        listeJours.classList.remove("annee");
+        listeJours.classList.add("mois");
+      }
+
     }
 
-    var nomJours = document.getElementsByClassName("nom-jours");
-    var nomMois = document.getElementsByClassName("nom-mois");
-    var numeroJours = document.getElementsByClassName("numero-jours");
-    var listeJours = document.getElementsByClassName("liste-jours");
-    var affichage = "mois";
-
-    document.querySelector("h2").addEventListener('click', alerte);  
+    document.querySelector("h2").addEventListener('click', swap);  
   </script>
 </body>
 </html>

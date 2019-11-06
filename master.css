@@ -191,8 +191,13 @@ main{
 	font-size: 1.7em;
 }
 
+.header-main h2:hover{
+	cursor: pointer;
+}
+
 	/*Calendrier*/
 .calendrier{
+	background-color: black;
 	grid-area: calendrier;
 	display: grid;
 	grid-template-columns: auto 1fr;
@@ -206,7 +211,6 @@ main{
 	border:solid;
 	border-width: 1px;
 	border-color:black;
-	line-height:10vh;
 	text-align:center;
 }
 
