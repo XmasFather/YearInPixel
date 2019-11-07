@@ -212,6 +212,7 @@ main{
 	border-width: 1px;
 	border-color:black;
 	text-align:center;
+	line-height: 10vh;
 }
 
 .calendrier ul{
@@ -252,7 +253,7 @@ main{
 
 #liste-jours.mois{
 	grid-template-columns: repeat(7, 1fr);
-	grid-template-rows: repeat(6, auto);
+	grid-template-rows: repeat(6, 1fr);
 }
 
 #liste-jours.mois li{
@@ -261,9 +262,24 @@ main{
 
 #liste-jours.annee{
 	grid-template-columns: repeat(12, 1fr);
-	grid-template-rows: repeat(31, auto);
+	grid-template-rows: repeat(31, 1fr);
 }
 
+#liste-jours li::after{
+	content: "";
+	position: relative;
+	top: 10vh;
+	height : 0;
+	width : 0;
+	border-right : 15px solid transparent;
+	border-bottom : 30px solid red;
+	border-left : 15px solid transparent;
+	display: none;
+}
+
+#liste-jours li:hover::after{
+	display: block;
+}
 
 
 /*Cacher les parties que nous n'avons pas besoin*/
