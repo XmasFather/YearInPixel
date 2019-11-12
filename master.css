@@ -253,7 +253,7 @@ main{
 
 #liste-jours.mois{
 	grid-template-columns: repeat(7, 1fr);
-	grid-template-rows: repeat(6, 1fr);
+	grid-template-rows: repeat(5, 1fr);
 }
 
 #liste-jours.mois li{
@@ -264,6 +264,8 @@ main{
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: repeat(31, 1fr);
 }
+
+/*Essai triangle après chaque case*/
 
 #liste-jours li::after{
 	content: "";
