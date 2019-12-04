@@ -168,6 +168,8 @@ footer{
 	width: 100%;
 	height: 50px;
 	text-align: center;
+	display: grid;
+	grid-template-columns: 1fr 3fr 1fr;
 }
 
 /*MAIN*/
@@ -300,4 +302,121 @@ main{
 .liste-humeur li{
 	font-size: 1.7em;
 	font-weight: bold;
+}
+
+
+/*carré pixel animé footer*/
+.container-pixel{
+	background-color: black;
+	width: 100px;
+	height: 100px;
+}
+
+.pixel{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    position: relative;
+    animation: 5s colorchange infinite alternate;
+}
+
+.pixel:nth-child(1){
+    left: 30px;
+    top: 80px;
+}
+
+.pixel:nth-child(2){
+    left: 40px;
+    top: 50px;
+}
+
+.pixel:nth-child(3){
+    left: 60px;
+    top: 30px;
+}
+
+.pixel:nth-child(4){
+    left: 70px;
+    top: 30px;
+}
+
+.pixel:nth-child(5){
+    left: 60px;
+    top: 30px;
+}
+
+.pixel:nth-child(6){
+    left: 80px;
+    top: 0px;
+}
+
+.pixel:nth-child(7){
+    left: 90px;
+    top: -20px;
+}
+
+.pixel:nth-child(8){
+    left: 50px;
+    top: 20px;
+}
+
+.pixel:nth-child(9){
+    left: 90px;
+    top: -20px;
+}
+
+.pixel:nth-child(10){
+    left: 80px;
+    top: -10px;
+}
+
+.pixel:nth-child(11){
+    left: 90px;
+    top: -30px;
+}
+
+.pixel:nth-child(12){
+    left: 90px;
+    top: -30px;
+}
+
+.pixel:nth-child(13){
+    left: 70px;
+    top: -30px;
+}
+
+.pixel:nth-child(14){
+    left: 80px;
+    top: -40px; 
+}
+
+.pixel:nth-child(15){
+    left: 90px;
+    top: -50px;
+}
+
+@keyframes colorchange{
+    0%{
+        background-color: var(--color-1);
+    }
+
+    18%{
+        background-color: var(--color-2);
+    }
+
+    36%{
+        background-color: var(--color-3);
+    }
+
+    54%{
+        background-color: var(--color-4);
+    }
+
+    72%{
+        background-color: var(--color-5);
+    }
+
+    90%{
+        background-color: var(--color-6);
+    }
 }
