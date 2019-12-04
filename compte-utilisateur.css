@@ -7,9 +7,9 @@
 }
 
 .conteneur-barres {
-    position: absolute;
     width: 100%;
-    top: 165px;
+    margin-top: -36px;
+    margin-bottom: 50px;
 }
 
 .barre {
