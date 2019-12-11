@@ -208,13 +208,14 @@ main{
 						 "numero-jours liste-jours";
 }
 
-.calendrier li{
+.calendrier > ul > li{
 	list-style-type: none;
 	border:solid;
 	border-width: 1px;
 	border-color:black;
 	text-align:center;
 	line-height: 10vh;
+	position:relative;
 }
 
 .calendrier ul{
@@ -258,7 +259,7 @@ main{
 	grid-template-rows: repeat(5, 1fr);
 }
 
-#liste-jours.mois li{
+#liste-jours.mois >li{
 	height: 10vh;
 }
 
@@ -273,16 +274,54 @@ main{
 	content: "";
 	position: relative;
 	top: 10vh;
+	left:100px;
 	height : 0;
 	width : 0;
 	border-right : 15px solid transparent;
-	border-bottom : 30px solid red;
+	border-bottom : 30px solid white;
 	border-left : 15px solid transparent;
 	display: none;
+	z-index:100;
 }
 
 #liste-jours li:hover::after{
 	display: block;
+}
+
+.modif-humeur li{
+	line-height:3vh;
+}
+
+.modif-humeur div{
+	display:grid;
+	grid-column: 1 / span 1;
+}
+
+.modif-humeur p{
+	display:inline-block;
+	display:grid;
+	grid-column: 2 / span 3;
+}
+
+#liste-jours li .modif-humeur{
+	display:none;
+	background-color:white;
+	border:0;
+	z-index:100;
+}
+
+#liste-jours li:hover .modif-humeur{
+	min-width:150px;
+	min-height:100px;
+	position:absolute;
+	top:calc(10vh + 30px);
+	left:0%;
+	display:block;
+}
+
+#liste-jours li:hover .modif-humeur li{
+	display:grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 
