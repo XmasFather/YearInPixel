@@ -8,7 +8,7 @@
             $compteur ++;
             echo "     --color-".$compteur.": #".$humeur[couleur]."; \n";
         }
-        echo "}";
+        echo "} \n";
     }
 
     /**/

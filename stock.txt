@@ -229,3 +229,31 @@
             <a href="#"><li>Affichage Année</li></a>
           </ul>
         </div>
+
+
+
+<ul class="container-pixel">
+        <li class="pixel"></li>
+        <li class="pixel"></li>
+        <li class="pixel"></li>
+        <li class="pixel"></li>
+        <li class="pixel"></li>
+        <li class="pixel"></li>
+        <li class="pixel"></li>
+        <li class="pixel"></li>
+        <li class="pixel"></li>
+        <li class="pixel"></li>
+        <li class="pixel"></li>
+        <li class="pixel"></li>
+        <li class="pixel"></li>
+        <li class="pixel"></li>
+        <li class="pixel"></li>
+    </ul>
+footer{
+	grid-area: footer;
+	width: 100%;
+	height: 50px;
+	text-align: center;
+	display: grid;
+	grid-template-columns: 1fr 3fr 1fr;
+}
