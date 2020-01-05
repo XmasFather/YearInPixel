@@ -8,25 +8,29 @@
     <title>Year in Pixel</title>
 </head>
 <?php
-
+    /* Importation des fonctions nécessaires à la page */
     require('functions.php');
-
+    /* Connexion à la BDD */
     $hostname = "localhost";
     $database = "mwe20_qmarolle_yip";
     $username = "mwe20_qmarolle";
     $password = 'AjnfDIoiJC8vLNA';
     $valeurUtilisateur = $_GET['user'];
-    if($valeurUtilisateur == NULL){
-        $valeurUtilisateur = 0;
-    }
-
     $bdd = new PDO("mysql:host=$hostname;dbname=$database",	$username, $password,array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8'"));
+
+    /* Récupération de l'utilisateur */
+    if($valeurUtilisateur == NULL){
+        $valeurUtilisateur = 1;
+    }
+    $utilisateur = $bdd->query("SELECT * FROM utilisateur WHERE id = $valeurUtilisateur");
+    $utilisateur = $utilisateur->fetch();
+    
 
 ?>
 <!-- Récupération des couleurs personnalisées en fonction des humeurs de l'utilisateur  -->
 <style>
     <?php 
-        miseEnPlaceCouleur($bdd, $valeurUtilisateur);
+        miseEnPlaceCouleur($bdd, $utilisateur[id]);
     ?>
 </style>
 <body>
@@ -35,16 +39,10 @@
         include('header.php');
     ?>
     <main>
-        <?php 
-            $nomUtilisateur = $bdd->query("SELECT * FROM utilisateur WHERE id = $valeurUtilisateur");
-            foreach($nomUtilisateur as $pseudo){
-                echo $pseudo[pseudo];
-            }
-        ?>
         <!-- Affichage des humeurs personnalisées de chaque utilisateur  -->
         <section class="humeur">
             <?php 
-                affichageHumeur($bdd, $valeurUtilisateur); 
+                affichageHumeur($bdd, $utilisateur[id]); 
             ?>
         </section>
     </main>
