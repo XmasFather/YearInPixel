@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="master.css">
-    <title>Year in Pixel</title>
-</head>
 <?php
     /* Importation des fonctions nécessaires à la page */
     require('functions.php');
@@ -27,6 +18,15 @@
     
 
 ?>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="master.css">
+    <title>Year in Pixel</title>
+</head>
 <!-- Récupération des couleurs personnalisées en fonction des humeurs de l'utilisateur  -->
 <style>
     <?php 
