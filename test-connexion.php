@@ -9,9 +9,11 @@
     $valeurUtilisateur = $_GET['user'];
     $bdd = new PDO("mysql:host=$hostname;dbname=$database",	$username, $password,array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8'"));
 
-    /* Récupération de l'utilisateur */
+    /* Récupération de l'utilisateur  à modifier à terme */
     if($valeurUtilisateur == NULL){
         $valeurUtilisateur = 1;
+        /*header('location:connexion.html');
+        exit();*/
     }
     $utilisateur = $bdd->query("SELECT * FROM utilisateur WHERE id = $valeurUtilisateur");
     $utilisateur = $utilisateur->fetch();
