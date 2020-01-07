@@ -177,23 +177,30 @@ h1 a{
 
 .infos-utilisateur{
 	position: absolute;
-	right: 10px;
-	top: 10px;
+	top: 0px;
+	right: 0px;
+	z-index: 1000;
 }
 
 .infos-utilisateur img{
 	width: 50px;
 	height: 50px;
 	padding: 5px;
+	margin: 10px;
 	float: right;
 	border: 3px solid;
   	border-image: conic-gradient(var(--color-1), var(--color-2), var(--color-3), var(--color-4), var(--color-5), var(--color-6)) 1;	
 	
 }
 
+.infos-utilisateur img:hover{
+	animation: rotationimage 1s linear;
+}
+
 .menu-utilisateur{
 	clear: both;
 	text-align: right;
+	padding: 10px;
 	background-color: var(--color-0);
 	width: 100vw;
 	height: 85vh;
@@ -470,6 +477,8 @@ main{
     top: -50px;
 }
 
+/* Animations CSS*/
+
 @keyframes colorchange{
     0%{
         background-color: var(--color-1);
@@ -494,6 +503,36 @@ main{
     90%{
         background-color: var(--color-6);
     }
+}
+
+@keyframes rotationimage{
+	0%{
+		transform: rotate(0deg);
+	}
+
+	15%{
+		transform: rotate(15deg);
+	}
+
+	30%{
+		transform: rotate(0deg);
+	}
+
+	45%{
+		transform: rotate(-15deg);
+	}
+
+	60%{
+		transform: rotate(0deg);
+	}
+
+	75%{
+		transform: rotate(15deg);
+	}
+
+	90%{
+		transform: rotate(0deg);
+	}
 }
 
 /* Media query pour le desktop */
