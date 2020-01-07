@@ -20,15 +20,9 @@
     
 
 ?>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="master.css">
-    <title>Year in Pixel</title>
-</head>
+<?php 
+        include('head.php');
+?>
 <!-- Récupération des couleurs personnalisées en fonction des humeurs de l'utilisateur  -->
 <style>
     <?php 
@@ -52,6 +46,22 @@
     <?php 
         include('footer.php');
     ?>
+
+    <script>
+        function affichageMenuUtilisateur(){
+            var menuUtilisateur = document.querySelector(".menu-utilisateur");
+            var affichage = menuUtilisateur.classList;
+
+            if(affichage == "menu-utilisateur hide"){
+                menuUtilisateur.classList.remove("hide");
+            }
+            else{
+                menuUtilisateur.classList.add("hide");
+            }
+        }
+
+        document.querySelector(".infos-utilisateur img").addEventListener('click', affichageMenuUtilisateur);
+    </script>
     
 </body>
 </html>

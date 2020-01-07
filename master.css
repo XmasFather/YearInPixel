@@ -161,10 +161,12 @@ body{
 
 h1{
 	font-family: Minecraft;
-	font-size: 3em;
+	font-size: 2.5em;
 	max-width: 500px;
 	margin: 20px auto;
-	text-align: center;
+	padding-left: 10px;
+	padding-top: 5px;
+	text-align: left;
 }
 
 h1 a{
@@ -192,7 +194,11 @@ h1 a{
 .menu-utilisateur{
 	clear: both;
 	text-align: right;
+	background-color: var(--color-0);
+	width: 100vw;
+	height: 85vh;
 }
+
 /*FOOTER*/
 
 footer{
@@ -488,4 +494,17 @@ main{
     90%{
         background-color: var(--color-6);
     }
+}
+
+/* Media query pour le desktop */
+
+@media screen and (min-width: 450px){
+	h1{
+		font-family: Minecraft;
+		font-size: 3em;
+		max-width: 500px;
+		margin: 20px auto;
+		text-align: center;
+	}
+	
 }

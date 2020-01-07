@@ -4,7 +4,7 @@
         </a></h1>      
         <div class="infos-utilisateur">
             <img src="avatars/<?=$utilisateur[avatar] ?>.png" alt="avatar-utlisateur">
-            <nav class="menu-utilisateur">
+            <nav class="menu-utilisateur hide">
                 <p>Bienvenue <?=$utilisateur[pseudo]."\n"?></p>
                 <ul>
                     <li>mail : <?=$utilisateur[email]."\n"?></li>
