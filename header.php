@@ -10,6 +10,7 @@
                     <li>mail : <?=$utilisateur[email]."\n"?></li>
                     <li>id : <?=$utilisateur[id]."\n"?></li>
                     <li>avatar : <?=$utilisateur[avatar]."\n"?></li>
+                    <li><a href="deconnexion.php">Deconnextion</a></li>
                 </ul>
             </nav>
         </div>

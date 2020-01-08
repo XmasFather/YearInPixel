@@ -1,4 +1,5 @@
 <?php
+    session_start();
     /* Importation des fonctions nécessaires à la page */
     require('functions.php');
     /* Connexion à la BDD */
@@ -6,14 +7,13 @@
     $database = "mwe20_qmarolle_yip";
     $username = "mwe20_qmarolle";
     $password = 'AjnfDIoiJC8vLNA';
-    $valeurUtilisateur = $_GET['user'];
+    $valeurUtilisateur = $_SESSION['id'];
     $bdd = new PDO("mysql:host=$hostname;dbname=$database",	$username, $password,array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8'"));
 
     /* Récupération de l'utilisateur  à modifier à terme */
     if($valeurUtilisateur == NULL){
-        $valeurUtilisateur = 1;
-        /*header('location:connexion.html');
-        exit();*/
+        header('location:connexion.php');
+        exit();
     }
     /* */
     $utilisateur = $bdd->query("SELECT * FROM utilisateur WHERE id = $valeurUtilisateur");
