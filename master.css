@@ -307,7 +307,7 @@ main{
 }
 
 /*Essai triangle après chaque case*/
-
+/*
 #liste-jours li::after{
 	content: "";
 	position: relative;
@@ -361,7 +361,7 @@ main{
 	display:grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-
+*/
 
 /*Cacher les parties que nous n'avons pas besoin*/
 

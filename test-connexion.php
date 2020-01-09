@@ -71,7 +71,7 @@
         </ul>
         
         <ul id="numero-jours" class="hide">
-            <li>rien</li>
+            <li></li>
             <li>1</li>
             <li>2</li>
             <li>3</li>
@@ -106,86 +106,351 @@
         </ul>
         
         <ul id="liste-jours" class="mois">
-            <li>
-            <ul class="modif-humeur">
-                <li><div class="couleur-humeur-1"></div><p>Heureux</p></li>
-                <li><div class="couleur-humeur-2"></div> <p>Excité</p></li>
-                <li><div class="couleur-humeur-3"></div><p>Normal</p></li>
-                <li><div class="couleur-humeur-4"></div><p>Enervé</p></li>
-                <li><div class="couleur-humeur-5"></div><p>Stressé</p></li>
-                <li><div class="couleur-humeur-6"></div><p>Triste</p></li>
-                </ul>
-            </li>
-            <li>
-            <ul class="modif-humeur">
-                <li><div class="couleur-humeur-1"></div><p>Heureux</p></li>
-                <li><div class="couleur-humeur-2"></div> <p>Excité</p></li>
-                <li><div class="couleur-humeur-3"></div><p>Normal</p></li>
-                <li><div class="couleur-humeur-4"></div><p>Enervé</p></li>
-                <li><div class="couleur-humeur-5"></div><p>Stressé</p></li>
-                <li><div class="couleur-humeur-6"></div><p>Triste</p></li>
-            </ul>
-            </li>
-            <li>
-            <ul class="modif-humeur">
-                <li><div class="couleur-humeur-1"></div><p>Heureux</p></li>
-                <li><div class="couleur-humeur-2"></div> <p>Excité</p></li>
-                <li><div class="couleur-humeur-3"></div><p>Normal</p></li>
-                <li><div class="couleur-humeur-4"></div><p>Enervé</p></li>
-                <li><div class="couleur-humeur-5"></div><p>Stressé</p></li>
-                <li><div class="couleur-humeur-6"></div><p>Triste</p></li>
-            </ul>
-            </li>
-            <li>
-            <ul class="modif-humeur">
-                <li><div class="couleur-humeur-1"></div><p>Heureux</p></li>
-                <li><div class="couleur-humeur-2"></div> <p>Excité</p></li>
-                <li><div class="couleur-humeur-3"></div><p>Normal</p></li>
-                <li><div class="couleur-humeur-4"></div><p>Enervé</p></li>
-                <li><div class="couleur-humeur-5"></div><p>Stressé</p></li>
-                <li><div class="couleur-humeur-6"></div><p>Triste</p></li>
-            </ul>
-            </li>
-            <li>
-            <ul class="modif-humeur">
-                <li><div class="couleur-humeur-1"></div><p>Heureux</p></li>
-                <li><div class="couleur-humeur-2"></div> <p>Excité</p></li>
-                <li><div class="couleur-humeur-3"></div><p>Normal</p></li>
-                <li><div class="couleur-humeur-4"></div><p>Enervé</p></li>
-                <li><div class="couleur-humeur-5"></div><p>Stressé</p></li>
-                <li><div class="couleur-humeur-6"></div><p>Triste</p></li>
-            </ul>
-            </li>
-            <li>
-            <ul class="modif-humeur">
-                <li><div class="couleur-humeur-1"></div><p>Heureux</p></li>
-                <li><div class="couleur-humeur-2"></div> <p>Excité</p></li>
-                <li><div class="couleur-humeur-3"></div><p>Normal</p></li>
-                <li><div class="couleur-humeur-4"></div><p>Enervé</p></li>
-                <li><div class="couleur-humeur-5"></div><p>Stressé</p></li>
-                <li><div class="couleur-humeur-6"></div><p>Triste</p></li>
-            </ul>
-            </li>
-            <li>
-            <ul class="modif-humeur">
-                <li><div class="couleur-humeur-1"></div><p>Heureux</p></li>
-                <li><div class="couleur-humeur-2"></div> <p>Excité</p></li>
-                <li><div class="couleur-humeur-3"></div><p>Normal</p></li>
-                <li><div class="couleur-humeur-4"></div><p>Enervé</p></li>
-                <li><div class="couleur-humeur-5"></div><p>Stressé</p></li>
-                <li><div class="couleur-humeur-6"></div><p>Triste</p></li>
-            </ul>
-            </li>
-            <li>
-            <ul class="modif-humeur">
-                <li><div class="couleur-humeur-1"></div><p>Heureux</p></li>
-                <li><div class="couleur-humeur-2"></div> <p>Excité</p></li>
-                <li><div class="couleur-humeur-3"></div><p>Normal</p></li>
-                <li><div class="couleur-humeur-4"></div><p>Enervé</p></li>
-                <li><div class="couleur-humeur-5"></div><p>Stressé</p></li>
-                <li><div class="couleur-humeur-6"></div><p>Triste</p></li>
-            </ul>
-            </li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
             <li></li>
             <li></li>
             <li></li>
