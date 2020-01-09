@@ -11,6 +11,18 @@
         echo "} \n";
     }
 
+    function affichageModificationHumeur($bdd, $idUtilisateur){
+        $couleurs = $bdd->query("SELECT * FROM humeur WHERE utilisateur_id = $idUtilisateur");
+        $compteur = 0;
+        foreach($couleurs as $humeur){
+            $compteur ++;
+            echo "<div class=\"modification-humeur\">\n";
+            echo "<input type=\"color\" id=\"couleur-".$compteur."\" name=\"couleur-".$compteur."\" value=\"#".$humeur[couleur]."\">\n";
+            echo "<label for=\"couleur-".$compteur."\">".$humeur[intitule]."</label>\n";
+            echo "</div>\n";
+        }
+    }
+
     /**/
     function affichageHumeur($bdd, $idUtilisateur){
         $couleurs = $bdd->query("SELECT * FROM humeur WHERE utilisateur_id = $idUtilisateur");
