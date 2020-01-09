@@ -374,6 +374,13 @@ main{
 	font-weight: bold;
 }
 
+/* Formulaire page connexion et insciption */
+
+.formulaire-compte{
+	max-width: 800px;
+	margin: auto;
+}
+
 /* Modification humeurs*/
 
 .modification-humeur{

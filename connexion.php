@@ -23,7 +23,11 @@
             <p>mot de passe</p>
             <input type="password" name="motdepasse"/>
             <input class="bouton-submit" type="submit" value="connexion"/>
+            <div>
+                <p>Pas encore inscrit ? clique <a href="creation-compte.php">ici</a></p>
+            </div>
         </form>
+        
    </main>
    <footer>
     <p>Proudly designed by Philaé, Myrial & Quentin in California</p>
