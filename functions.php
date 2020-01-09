@@ -16,8 +16,8 @@
         $compteur = 0;
         foreach($couleurs as $humeur){
             $compteur ++;
-            echo "<div class=\"modification-humeur\">\n";
-            echo "<input type=\"color\" id=\"couleur-".$compteur."\" name=\"couleur-".$compteur."\" value=\"#".$humeur[couleur]."\">\n";
+            echo "<div class=\"humeur-a-modifiee\">\n";
+            echo "<input type=\"color\" class=\"input-couleur\" id=\"couleur-".$compteur."\" name=\"couleur-".$compteur."\" value=\"#".$humeur[couleur]."\">\n";
             echo "<label for=\"couleur-".$compteur."\">".$humeur[intitule]."</label>\n";
             echo "</div>\n";
         }
@@ -35,5 +35,14 @@
         echo "</ul> \n";
     }
 
-    
+    /* Affichage contenu dossier sous forme de liste*/ 
+    function contenuDossier($nomDossier, $nomListe){
+        $dir = $nomDossier;
+        $dossier = scandir($dir);
+        echo "<ul class=\"".$nomListe."\">\n";
+        for($i=2; $i<=count($dossier); $i++){
+            echo "<li><img src=\"avatars/".$dossier[$i]."\" alt=\"".$dossier[$i]."\"></li>\n";
+        }
+        echo "</ul>";
+    }   
 ?>

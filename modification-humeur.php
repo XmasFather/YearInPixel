@@ -37,10 +37,15 @@
         include('header.php');
     ?>
     <main>
-        <h2>Modifier vos humeurs</h2>
+        <header class="header-main">
+            <h2>Envie de changer vos humeurs ?</h2>
+        </header>
+        <section class="modification-humeur">
         <?php
             affichageModificationHumeur($bdd, $id);
         ?>
+        </section>
+        
     </main>
     <?php 
         /* On appelle le footer qui sera commun à toutes nos pages */

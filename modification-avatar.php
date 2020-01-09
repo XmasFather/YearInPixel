@@ -38,6 +38,9 @@
     ?>
     <main>
         <p>Modification avatar</p>
+        <?php
+            contenuDossier("avatars", "liste-avatars");
+        ?>
     </main>
     <?php 
         /* On appelle le footer qui sera commun à toutes nos pages */

@@ -218,16 +218,9 @@ footer{
 /*MAIN*/
 main{
 	grid-area: main;
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: auto auto auto;
-	grid-template-areas: "header-main"
-						 "calendrier"
-						 "humeur";
 }
 	/*Header du main*/
 .header-main{
-	grid-area: header-main;
 	margin-bottom: 30px;
 }
 
@@ -242,7 +235,6 @@ main{
 
 	/*Calendrier*/
 .calendrier{
-	grid-area: calendrier;
 	display: grid;
 	grid-template-columns: auto 1fr;
 	grid-template-rows: auto 1fr;
@@ -371,8 +363,7 @@ main{
 
 	/*Liste humeur*/
 .humeur{
-	grid-area: humeur;
-	min-width: 300px;
+	width: 300px;
 	margin: auto;
 	margin-top: 30px;
 	margin-bottom: 30px;
@@ -381,6 +372,36 @@ main{
 .liste-humeur li{
 	font-size: 1.7em;
 	font-weight: bold;
+}
+
+/* Modification humeurs*/
+
+.modification-humeur{
+	margin: 10px;
+}
+
+.humeur-a-modifiee{
+
+}
+
+.input-couleur{
+	width: 30px;
+	height: 30px;
+}
+
+/* Modification avatars */
+
+.liste-avatars{
+	width: 300px;
+	margin: auto;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	
+}
+
+.liste-avatars img{
+	width: 60px;
+	height: 60px;
 }
 
 /* Animations CSS*/
