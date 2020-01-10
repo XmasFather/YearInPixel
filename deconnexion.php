@@ -5,4 +5,3 @@
     sleep(1);
     header('location:connexion.php');
     exit();
-?>

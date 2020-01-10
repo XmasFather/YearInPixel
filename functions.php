@@ -18,7 +18,7 @@
             $compteur ++;
             echo "<div class=\"humeur-a-modifiee\">\n";
             echo "<input type=\"color\" class=\"input-couleur\" id=\"couleur-".$compteur."\" name=\"couleur-".$compteur."\" value=\"#".$humeur[couleur]."\">\n";
-            echo "<label for=\"couleur-".$compteur."\">".$humeur[intitule]."</label>\n";
+            echo "<input type=\"text\" class=\"input-humeur\" id=\"humeur-".$compteur."\" name=\"humeur-".$compteur."\" value=\"".$humeur[intitule]."\">\n";
             echo "</div>\n";
         }
     }
@@ -39,10 +39,10 @@
     function contenuDossier($nomDossier, $nomListe){
         $dir = $nomDossier;
         $dossier = scandir($dir);
-        echo "<ul class=\"".$nomListe."\">\n";
         for($i=2; $i<=count($dossier); $i++){
-            echo "<li><img src=\"avatars/".$dossier[$i]."\" alt=\"".$dossier[$i]."\"></li>\n";
+            echo "<label>";
+            echo "<input type=\"radio\" name=\"avatar\" value=\"".$dossier[$i]."\">\n";
+            echo "<img src=\"avatars/".$dossier[$i]."\" alt=\"".$dossier[$i]."\">\n";
+            echo "</label>";
         }
-        echo "</ul>";
     }   
-?>

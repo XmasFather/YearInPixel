@@ -38,9 +38,12 @@
     ?>
     <main>
         <p>Modification avatar</p>
+        <form action="https://azrael.sha.univ-poitiers.fr/~ydelmas/exemples/info-max.php" method="post">
         <?php
             contenuDossier("avatars", "liste-avatars");
         ?>
+        <input class="bouton-submit" type="submit" value="Modifier votre Avatar"/>
+        </form >
     </main>
     <?php 
         /* On appelle le footer qui sera commun à toutes nos pages */

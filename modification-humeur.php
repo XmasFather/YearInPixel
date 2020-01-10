@@ -40,11 +40,12 @@
         <header class="header-main">
             <h2>Envie de changer vos humeurs ?</h2>
         </header>
-        <section class="modification-humeur">
+        <form action="envoi-modification-humeur.php" method="post">
         <?php
             affichageModificationHumeur($bdd, $id);
         ?>
-        </section>
+        <input class="bouton-submit" type="submit" value="Enregistrer vos humeurs"/>
+        </form>
         
     </main>
     <?php 
