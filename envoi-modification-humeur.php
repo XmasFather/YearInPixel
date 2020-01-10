@@ -18,20 +18,23 @@
 
     $humeursutilisateur = $bdd->query("SELECT id FROM humeur WHERE utilisateur_id = $id");
     $humeursutilisateur = $humeursutilisateur->fetchAll();
-    echo "id humeur 1 =".$humeursutilisateur[0]['id']."\n";
-    echo "id humeur 2 =".$humeursutilisateur[1]['id']."\n";
-    echo "id humeur 3 =".$humeursutilisateur[2]['id']."\n";
-    echo "id humeur 4 =".$humeursutilisateur[3]['id']."\n";
-    echo "id humeur 5 =".$humeursutilisateur[4]['id']."\n";
-    echo "id humeur 6 =".$humeursutilisateur[5]['id']."\n";
+    
+    for($i=0; $i<=count($humeursutilisateur); $i++){
+        $req = $bdd->prepare("UPDATE humeur SET intitule = :intitule, couleur = :couleur WHERE id = :id");
+        $req->execute(array(
+            'intitule' => $_POST['humeur-'.$i],
+            'couleur' => substr($_POST['couleur-'.$i], 1, 6),
+            'id' => $humeursutilisateur[$i-1]['id'])); 
+    }
+    
 
-    echo $_POST['humeur-1']." ".$_POST['couleur-1']."\n";
-    echo $_POST['humeur-2']." ".$_POST['couleur-2']."\n";
-    echo $_POST['humeur-3']." ".$_POST['couleur-3']."\n";
-    echo $_POST['humeur-4']." ".$_POST['couleur-4']."\n";
-    echo $_POST['humeur-5']." ".$_POST['couleur-5']."\n";
-    echo $_POST['humeur-6']." ".$_POST['couleur-6']."\n";
+    sleep(0.5);
+    header('location:modification-humeur.php');
+    exit();
 
-?>
+
+   
+
+
     
     
