@@ -215,6 +215,13 @@ footer{
 	text-align: center;
 }
 
+/* Formulaires */
+
+form{
+	width: 300px;
+	margin: auto;
+}
+
 /*MAIN*/
 main{
 	grid-area: main;
@@ -399,8 +406,6 @@ main{
 /* Modification avatars */
 
 .liste-avatars{
-	width: 300px;
-	margin: auto;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap: 20px;
@@ -410,6 +415,24 @@ main{
 	width: 60px;
 	height: 60px;
 }
+
+/* HIDE RADIO */
+[type=radio] { 
+	position: absolute;
+	opacity: 0;
+	width: 0;
+	height: 0;
+  }
+  
+  /* IMAGE STYLES */
+  [type=radio] + img {
+	cursor: pointer;
+  }
+  
+  /* CHECKED STYLES */
+  [type=radio]:checked + img {
+	outline: 5px solid var(--color-1);
+  }
 
 /* Animations CSS*/
 

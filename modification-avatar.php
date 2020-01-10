@@ -38,7 +38,7 @@
     ?>
     <main>
         <p>Modification avatar</p>
-        <form action="https://azrael.sha.univ-poitiers.fr/~ydelmas/exemples/info-max.php" method="post">
+        <form class="liste-avatars" action="envoi-modification-avatar.php" method="post">
         <?php
             contenuDossier("avatars", "liste-avatars");
         ?>
