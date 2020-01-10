@@ -16,9 +16,9 @@
     $password = 'AjnfDIoiJC8vLNA';
     $bdd = new PDO("mysql:host=$hostname;dbname=$database",	$username, $password,array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8'"));
     /* */
-    $utilisateur = $bdd->query("SELECT * FROM utilisateur WHERE id = $id");
+    $utilisateur = $bdd->query("SELECT * FROM utilisateur WHERE id = ?", array($id));
     /* Change l'état de $utilisateur pour le rendre manipulable */
-    $utilisateur = $utilisateur->fetch();
+    $utilisateur = $utilisateur[0];
     
 
 ?>
