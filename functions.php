@@ -45,4 +45,4 @@
             echo "<img src=\"avatars/".$dossier[$i]."\" alt=\"".$dossier[$i]."\">\n";
             echo "</label>";
         }
-    }   
+    } 

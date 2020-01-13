@@ -12,6 +12,8 @@
                     <li>avatar : <?=$utilisateur[avatar]."\n"?></li>
                     <li><a href="modification-humeur.php">Personnaliser vos humeurs</a></li>
                     <li><a href="modification-avatar.php">Changer votre avatar</a></li>
+                    <li><a href="reset-humeurs.php">Remise à zéro des couleurs</a></li>
+                    <li></li>
                     <li><a href="deconnexion.php">Deconnexion</a></li>
                 </ul>
             </nav>
