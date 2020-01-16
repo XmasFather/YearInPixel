@@ -375,3 +375,121 @@ footer{
 	display: grid;
 	grid-template-columns: 1fr 3fr 1fr;
 }
+
+
+NAVIGATION 
+
+<img src="avatars/<?=$utilisateur[avatar] ?>" alt="avatar-utlisateur">
+            <nav class="menu-utilisateur hide">
+                <p>Bienvenue <?=$utilisateur[pseudo]."\n"?></p>
+                <ul>
+                    <li>mail : <?=$utilisateur[email]."\n"?></li>
+                    <li>id : <?=$utilisateur[id]."\n"?></li>
+                    <li>avatar : <?=$utilisateur[avatar]."\n"?></li>
+                    <li><a href="modification-humeur.php">Personnaliser vos humeurs</a></li>
+                    <li><a href="modification-avatar.php">Changer votre avatar</a></li>
+                    <li><a href="reset-humeurs.php">Remise à zéro des couleurs</a></li>
+                    <li></li>
+                    <li><a href="deconnexion.php">Deconnexion</a></li>
+                </ul>
+            </nav>
+
+
+/* Burger Menu */
+
+ #menuToggle a
+ {
+   text-decoration: none;
+   color: #232323;
+   
+   transition: color 0.3s ease;
+ }
+ 
+ #menuToggle a:hover
+ {
+   color: tomato;
+ }
+ 
+ #menuToggle
+ {
+   display: block;
+   position: absolute;
+   top: 10px;
+   right: 0px;
+   
+   z-index: 1;
+   
+   -webkit-user-select: none;
+   user-select: none;
+ }
+ 
+ #menuToggle input
+ {
+   display: block;
+   width: 50px;
+   height: 50px;
+   padding: 5px;
+	margin: 10px;
+   position: absolute;
+   
+   cursor: pointer;
+   
+   opacity: 0; /* hide this */
+   z-index: 2; /* and place it over the hamburger */
+   
+   -webkit-touch-callout: none;
+ }
+
+ .infos-utilisateur img{
+	width: 50px;
+	height: 50px;
+	padding: 5px;
+	margin: 10px;
+	position: relative;
+	top: -8px;
+	right: 8px;
+	z-index: 1;
+	float: right;
+	border: 3px solid;
+  	border-image: conic-gradient(var(--color-1), var(--color-2), var(--color-3), var(--color-4), var(--color-5), var(--color-6)) 1;	
+	
+}
+
+ /*
+  * Make this absolute positioned
+  * at the top left of the screen
+  */
+ #menu
+ {
+   position: absolute;
+   width: 300px;
+   margin: -100px 0 0 0;
+   padding: 50px;
+   padding-top: 125px;
+   right: -100px;
+   
+   background: #ededed;
+   list-style-type: none;
+   -webkit-font-smoothing: antialiased;
+   /* to stop flickering of text in safari */
+   
+   transform-origin: 0% 0%;
+   transform: translate(100%, 0);
+   
+   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+ }
+ 
+ #menu li
+ {
+   padding: 10px 0;
+   font-size: 22px;
+ }
+ 
+ /*
+  * And let's fade it in from the left
+  */
+ #menuToggle input:checked ~ ul
+ {
+   transform: scale(1.0, 1.0);
+   opacity: 1;
+ }

@@ -73,7 +73,7 @@ else
         $_SESSION['pseudo'] = $pseudo;
         echo 'Vous êtes connecté !';
         sleep(1);
-        header('location:test-connexion.php');
+        header('location:index.php');
         exit();
     }
     else {
