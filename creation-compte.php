@@ -1,3 +1,8 @@
+<?php
+    /* Importation des fonctions nécessaires à la page */
+    require('functions.php');
+
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -17,7 +22,7 @@
     ?>
     <main class="main-compte">
         <h2 class="titre-compte">créer un compte</h2>
-        <form class="formulaire-compte" name="formulaire-creation-compte" action="" method="post">
+        <form class="formulaire-compte" name="formulaire-creation-compte" action="envoi-creation-compte.php" method="post">
             <p>adresse mail</p>
             <input type="text" name="email"/>
             <p>identifiant</p>
@@ -35,41 +40,3 @@
     ?>
 </body>
 </html>
-
-<?php 
-    /* Importation des fonctions nécessaires à la page */
-    require('functions.php');
-    /* Connexion à la BDD */
-    $hostname = "localhost";
-    $database = "mwe20_qmarolle_yip";
-    $username = "mwe20_qmarolle";
-    $password = 'AjnfDIoiJC8vLNA';
-    $bdd = new PDO("mysql:host=$hostname;dbname=$database",	$username, $password,array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8'"));
-
-// Vérification de la validité des informations
-
-// Hachage du mot de passe
-//$pass_hache = password_hash($_POST['pass'], PASSWORD_DEFAULT);
-
-$email = $_POST['email'];
-$pseudo = $_POST['pseudo'];
-$mdp = $_POST['motdepasse'];
-
-// Insertion
-$req = $bdd->prepare('INSERT INTO utilisateur(email, pseudo, motdepasse) VALUES(:email, :pseudo, :motdepasse)');
-$req->execute(array(
-    'email' => $email,
-    'pseudo' => $pseudo,
-    'motdepasse' => $mdp,));
-$resultat = $req->fetch();
-
-if (!$resultat)
-{
-    echo 'Identifiant ou mot de passe incorrect 1';
-}
-else
-{
-    echo "compte créé";
-}
-
-?>
