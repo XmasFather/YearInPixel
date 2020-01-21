@@ -173,16 +173,23 @@ a, a:visited{
 
 /*CORPS DE PAGE*/ /*Mobile First*/
 body{
-	min-height: 100%;
 	background-color: var(--color-background);
 	color: var(--color-text);
 	font-family: VT323, 	sans-serif;
+}
+
+.conteneur{
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: auto 1fr auto;
 	grid-template-areas: "header"
 						 "main"
 						 "footer";
+}
+
+.conteneur{
+	width: 100vw;
+   overflow-x: hidden;
 }
 /*HEADER*/
 .header-principal{
@@ -424,13 +431,6 @@ main{
  {
    color: var(--color-4);
  }
- 
-.conteneur{
-	position: absolute;
-	width: 100vw;
-   height: 100vh;
-   overflow-x: hidden;
-}
 
  #menuToggle
  {
