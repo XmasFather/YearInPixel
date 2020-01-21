@@ -33,6 +33,7 @@
     ?>
 </style>
 <body>
+    <div class="conteneur">
     <?php 
         /* On appelle le header qui sera commun à toutes nos pages */
         include('header.php');
@@ -490,6 +491,7 @@
         /* On appelle le footer qui sera commun à toutes nos pages */
         include('footer.php');
     ?>
+    </div>
 
 <script type="text/javascript" src="script.js"></script>
     

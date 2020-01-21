@@ -3,7 +3,7 @@
     function miseEnPlaceCouleur($bdd, $idUtilisateur){
         $couleurs = $bdd->query("SELECT * FROM humeur WHERE utilisateur_id = $idUtilisateur");
         $compteur = 0;
-        echo ":root{ \n     --color-background: #fff8ed; \n     --color-0: #ffffff; \n";
+        echo ":root{ \n     --color-background: #fff8ed; \n     --color-text: #333333; \n     --color-0: #ffffff; \n";
         foreach($couleurs as $humeur){
             $compteur ++;
             echo "     --color-".$compteur.": #".$humeur[couleur]."; \n";

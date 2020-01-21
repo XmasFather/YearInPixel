@@ -2,8 +2,7 @@
         <h1><a href="./">
         Year In <span class="couleur-1">P</span><span class="couleur-2">i</span><span class="couleur-3">x</span><span class="couleur-4">e</span><span class="couleur-5">l</span><span class="couleur-6">s</span>
         </a></h1>      
-            <nav role='navigation'>
-            <div id="menuToggle">
+            <nav role='navigation' id="menuToggle">
                 <input type="checkbox" id="avatar" />
                 <label for="avatar"><img src="avatars/<?=$utilisateur[avatar] ?>" alt="avatar-utlisateur">  </label>                   
                 <ul id="menu">
@@ -16,6 +15,5 @@
                     <li></li>
                     <li><a href="deconnexion.php">Deconnexion</a></li>
                 </ul>
-            </div>
             </nav>
     </header>
