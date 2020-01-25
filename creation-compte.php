@@ -16,10 +16,10 @@
     <title>Year in Pixel | Création de compte</title>
 </head>
 <body>
-    <?php 
-        /* On appelle le header qui sera commun à toutes nos pages */
-        include('header.php');
-    ?>
+    <header class="header-principal">
+        <h1>Year In <span class="couleur-1">P</span><span class="couleur-2">i</span><span class="couleur-3">x</span><span class="couleur-4">e</span><span class="couleur-5">l</span><span class="couleur-6">s</span>
+        </h1>
+    </header> 
     <main class="main-compte">
         <h2 class="titre-compte">créer un compte</h2>
         <form class="formulaire-compte" name="formulaire-creation-compte" action="envoi-creation-compte.php" method="post">

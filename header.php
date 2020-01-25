@@ -6,6 +6,7 @@
                 <input type="checkbox" id="avatar" />
                 <label for="avatar"><img src="avatars/<?=$utilisateur[avatar] ?>" alt="avatar-utlisateur">  </label>                   
                 <ul id="menu">
+                    <li><?=bonjourAleatoire($utilisateur)?></li>
                     <li>mail : <?=$utilisateur[email]."\n"?></li>
                     <li>id : <?=$utilisateur[id]."\n"?></li>
                     <li>avatar : <?=$utilisateur[avatar]."\n"?></li>

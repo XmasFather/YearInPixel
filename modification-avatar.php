@@ -38,12 +38,14 @@
         include('header.php');
     ?>
     <main>
-        <p>Modification avatar</p>
+        <header class="header-main">
+                <h2>Que choisir comme avatar ?</h2>
+            </header>
         <form class="liste-avatars" action="envoi-modification-avatar.php" method="post">
-        <?php
-            contenuDossier("avatars", "liste-avatars");
-        ?>
-        <input class="bouton-submit" type="submit" value="Modifier votre Avatar"/>
+            <?php
+                affichageAvatar("avatars", $utilisateur);
+            ?>
+            <input class="bouton-submit" type="submit" value="Modifier votre Avatar"/>
         </form >
     </main>
     <?php 
