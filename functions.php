@@ -16,7 +16,7 @@
         $compteur = 0;
         foreach($couleurs as $humeur){
             $compteur ++;
-            echo "<div class=\"humeur-a-modifiee\">\n";
+            echo "<div class=\"humeur-a-modifier\">\n";
             echo "<input type=\"color\" class=\"input-couleur\" id=\"couleur-".$compteur."\" name=\"couleur-".$compteur."\" value=\"#".$humeur[couleur]."\">\n";
             echo "<input type=\"text\" class=\"input-humeur\" id=\"humeur-".$compteur."\" name=\"humeur-".$compteur."\" value=\"".$humeur[intitule]."\">\n";
             echo "</div>\n";
