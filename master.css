@@ -357,6 +357,7 @@ main{
 	font-family: VT323, sans-serif;
 	font-size: 2.5em;
 	margin-left: 5px;
+	min-width: 200px;
 }
 
 .input-couleur{
