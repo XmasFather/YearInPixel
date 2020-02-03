@@ -90,6 +90,22 @@ table {
   color: var(--color-6);
 }
 
+.couleur-7{
+	color: var(--color-7);
+  }
+
+.couleur-8{
+	color: var(--color-8);
+}
+
+.couleur-9{
+	color: var(--color-9);
+}
+
+.couleur-10{
+	color: var(--color-10);
+}
+
 /*HUMEURS*/
 
 .couleur-humeur-0{
@@ -120,6 +136,21 @@ table {
 	background-color: var(--color-6);
   }
 
+  .couleur-humeur-7{
+	background-color: var(--color-7);
+  }
+
+  .couleur-humeur-8{
+	background-color: var(--color-8);
+  }
+
+  .couleur-humeur-9{
+	background-color: var(--color-9);
+  }
+
+  .couleur-humeur-10{
+	background-color: var(--color-10);
+  }
 .carre-couleur-humeur{
 	width: 2em;
 	height: 2em;
@@ -142,16 +173,25 @@ a, a:visited{
 
 /*CORPS DE PAGE*/ /*Mobile First*/
 body{
-	min-height: 100%;
 	background-color: var(--color-background);
-	color: #333333;
+	color: var(--color-text);
 	font-family: VT323, 	sans-serif;
+}
+
+.conteneur{
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: auto 1fr auto;
 	grid-template-areas: "header"
 						 "main"
 						 "footer";
+}
+
+.conteneur{
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+   overflow-x: hidden;
 }
 /*HEADER*/
 .header-principal{
@@ -175,37 +215,6 @@ h1 a{
 	height: 100%;
 }
 
-.infos-utilisateur{
-	position: absolute;
-	top: 0px;
-	right: 0px;
-	z-index: 1000;
-}
-
-.infos-utilisateur img{
-	width: 50px;
-	height: 50px;
-	padding: 5px;
-	margin: 10px;
-	float: right;
-	border: 3px solid;
-  	border-image: conic-gradient(var(--color-1), var(--color-2), var(--color-3), var(--color-4), var(--color-5), var(--color-6)) 1;	
-	
-}
-
-.infos-utilisateur img:hover{
-	animation: rotationimage 1s linear;
-}
-
-.menu-utilisateur{
-	clear: both;
-	text-align: right;
-	padding: 10px;
-	background-color: var(--color-0);
-	width: 100vw;
-	height: 85vh;
-}
-
 /*FOOTER*/
 
 footer{
@@ -213,6 +222,13 @@ footer{
 	width: 100%;
 	height: 50px;
 	text-align: center;
+}
+
+/* Formulaires */
+
+form{
+	width: 300px;
+	margin: auto;
 }
 
 /*MAIN*/
@@ -298,63 +314,6 @@ main{
 	grid-template-rows: repeat(31, 1fr);
 }
 
-/*Essai triangle après chaque case*/
-/*
-#liste-jours li::after{
-	content: "";
-	position: relative;
-	top: 10vh;
-	left:100px;
-	height : 0;
-	width : 0;
-	border-right : 15px solid transparent;
-	border-bottom : 30px solid white;
-	border-left : 15px solid transparent;
-	display: none;
-	z-index:100;
-}
-
-#liste-jours li:hover::after{
-	display: block;
-}
-
-.modif-humeur li{
-	line-height:3vh;
-}
-
-.modif-humeur div{
-	display:grid;
-	grid-column: 1 / span 1;
-}
-
-.modif-humeur p{
-	display:inline-block;
-	display:grid;
-	grid-column: 2 / span 3;
-}
-
-#liste-jours li .modif-humeur{
-	display:none;
-	background-color:white;
-	border:0;
-	z-index:100;
-}
-
-#liste-jours li:hover .modif-humeur{
-	min-width:150px;
-	min-height:100px;
-	position:absolute;
-	top:calc(10vh + 30px);
-	left:0%;
-	display:block;
-}
-
-#liste-jours li:hover .modif-humeur li{
-	display:grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-*/
-
 /*Cacher les parties que nous n'avons pas besoin*/
 
 .hide{
@@ -387,20 +346,43 @@ main{
 	margin: 10px;
 }
 
-.humeur-a-modifiee{
+.humeur-a-modifier{
+	display: grid;
+	grid-template-columns: 1fr 4fr;
+	margin: 5px;
+}
 
+.input-humeur{
+	border: none;
+	font-family: VT323, sans-serif;
+	font-size: 2.5em;
+	margin-left: 5px;
+	min-width: 200px;
 }
 
 .input-couleur{
-	width: 30px;
-	height: 30px;
+	width: 50px;
+	height: 50px;
+	border: none;
+}
+
+.bouton-modification {
+	display: block;
+    text-transform: uppercase;
+	font-size: 1em;
+	min-width: 200px;
+	margin: auto;
+	margin-top: 10px;
+    padding: 7px;
+    background:#f5f5f5;
+	color:#555;
+	border-radius:2px;
+	border:1px solid #ccc;
 }
 
 /* Modification avatars */
 
 .liste-avatars{
-	width: 300px;
-	margin: auto;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap: 20px;
@@ -410,6 +392,25 @@ main{
 	width: 60px;
 	height: 60px;
 }
+
+/* HIDE RADIO */
+[type=radio] { 
+	position: absolute;
+	opacity: 0;
+	width: 0;
+	height: 0;
+  }
+  
+  /* IMAGE STYLES */
+  [type=radio] + img {
+	cursor: pointer;
+  }
+  
+  /* CHECKED STYLES */
+  [type=radio]:checked + img {
+	outline: 3px solid var(--color-1);
+	outline-offset: 5px;
+  }
 
 /* Animations CSS*/
 
@@ -442,6 +443,91 @@ main{
 		transform: rotate(0deg);
 	}
 }
+
+/* Burger Menu */
+
+ #menuToggle a
+ {
+   text-decoration: none;
+   color: #232323;
+   
+   transition: color 0.3s ease;
+ }
+ 
+ #menuToggle a:hover
+ {
+   color: var(--color-4);
+ }
+
+ #menuToggle
+ {
+   display: block;
+   position: absolute;
+   margin: auto;
+   top: 0;
+   right: 0;   
+   -webkit-user-select: none;
+   user-select: none;
+ }
+ 
+ #menuToggle input
+ {
+   display: none;
+   -webkit-touch-callout: none;
+ }
+
+ #menuToggle label{
+	float: right;
+ }
+
+ #menuToggle img{
+	width: 50px;
+	height: 50px;
+	padding: 5px;
+	margin: 10px;
+	position: relative;
+	top: 7px;
+	right: 7px;
+	z-index: 1000;
+	cursor: pointer;
+	border: 3px solid;
+  	border-image: conic-gradient(var(--color-1), var(--color-2), var(--color-3), var(--color-4), var(--color-5), var(--color-6)) 1;		
+}
+
+ #menu
+ {
+   position: absolute;
+   width: calc(100vw - 100px);
+   height: 100vh;
+   margin: 0;
+   padding: 50px;
+   top: 0;
+   right: 0;
+   background: #ededed;
+   list-style-type: none;
+   -webkit-font-smoothing: antialiased;
+   /* to stop flickering of text in safari */
+   transform-origin: 0% 0%;
+   transform: translate(100%, 0);
+   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+   z-index: 10;
+ }
+ 
+ #menu li
+ {
+   padding: 10px 0;
+   font-size: 22px;
+ }
+ 
+ /*
+  * And let's fade it in from the left
+  */
+ #menuToggle input:checked ~ ul
+ {
+   transform: scale(1.0, 1.0);
+   opacity: 1;
+ }
+ 
 
 /* Media query pour le desktop */
 

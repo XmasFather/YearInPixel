@@ -32,26 +32,28 @@
     ?>
 </style>
 <body>
-    <?php 
-        /* On appelle le header qui sera commun à toutes nos pages */
-        include('header.php');
-    ?>
-    <main>
-        <header class="header-main">
-            <h2>Envie de changer vos humeurs ?</h2>
-        </header>
-        <form action="envoi-modification-humeur.php" method="post">
-        <?php
-            affichageModificationHumeur($bdd, $id);
+    <div class="conteneur">
+        <?php 
+            /* On appelle le header qui sera commun à toutes nos pages */
+            include('header.php');
         ?>
-        <input class="bouton-submit" type="submit" value="Enregistrer vos humeurs"/>
-        </form>
-        
-    </main>
-    <?php 
-        /* On appelle le footer qui sera commun à toutes nos pages */
-        include('footer.php');
-    ?>
+        <main>
+            <header class="header-main">
+                <h2>Envie de changer vos humeurs ?</h2>
+            </header>
+            <form action="envoi-modification-humeur.php" method="post">
+            <?php
+                affichageModificationHumeur($bdd, $id);
+            ?>
+            <input class="bouton-modification" type="submit" value="Enregistrer vos humeurs"/>
+            </form>
+            
+        </main>
+        <?php 
+            /* On appelle le footer qui sera commun à toutes nos pages */
+            include('footer.php');
+        ?>
+    </div>
 
 <script type="text/javascript" src="script.js"></script>
     

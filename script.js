@@ -1,19 +1,3 @@
-/* Affichage du menu quand on clique sur l'avatar */
-
-function affichageMenuUtilisateur(){
-    var menuUtilisateur = document.querySelector(".menu-utilisateur");
-    var affichage = menuUtilisateur.classList;
-
-    if(affichage == "menu-utilisateur hide"){
-        menuUtilisateur.classList.remove("hide");
-    }
-    else{
-        menuUtilisateur.classList.add("hide");
-    }
-}
-
-document.querySelector(".infos-utilisateur img").addEventListener('click', affichageMenuUtilisateur);
-
 /* Changement de l'affichage mois à année */
 
 function swap(){

@@ -32,23 +32,27 @@
     ?>
 </style>
 <body>
+    <div class="conteneur">
     <?php 
         /* On appelle le header qui sera commun à toutes nos pages */
         include('header.php');
     ?>
     <main>
-        <p>Modification avatar</p>
-        <form action="https://azrael.sha.univ-poitiers.fr/~ydelmas/exemples/info-max.php" method="post">
-        <?php
-            contenuDossier("avatars", "liste-avatars");
-        ?>
-        <input class="bouton-submit" type="submit" value="Modifier votre Avatar"/>
+        <header class="header-main">
+                <h2>Que choisir comme avatar ?</h2>
+            </header>
+        <form class="liste-avatars" action="envoi-modification-avatar.php" method="post">
+            <?php
+                affichageAvatar("avatars", $utilisateur);
+            ?>
+            <input class="bouton-submit" type="submit" value="Modifier votre Avatar"/>
         </form >
     </main>
     <?php 
         /* On appelle le footer qui sera commun à toutes nos pages */
         include('footer.php');
     ?>
+    </div>
 
 <script type="text/javascript" src="script.js"></script>
     
