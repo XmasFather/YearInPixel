@@ -45,7 +45,7 @@
             <?php
                 affichageAvatar("avatars", $utilisateur);
             ?>
-            <input class="bouton-submit" type="submit" value="Modifier votre Avatar"/>
+            <input class="bouton-modification bouton-avatar" type="submit" value="Modifier votre Avatar"/>
         </form >
     </main>
     <?php 
