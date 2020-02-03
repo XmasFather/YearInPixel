@@ -45,7 +45,7 @@
             <?php
                 affichageModificationHumeur($bdd, $id);
             ?>
-            <input class="bouton-modification" type="submit" value="Enregistrer vos humeurs"/>
+            <input class="bouton-modification bouton-humeur" type="submit" value="Enregistrer vos humeurs"/>
             </form>
             
         </main>

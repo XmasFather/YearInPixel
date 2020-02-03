@@ -39,7 +39,7 @@
     function affichageAvatar($nomDossier, $utilisateur){
         $dir = $nomDossier;
         $avatars = scandir($dir);
-        for($i=2; $i<=count($avatars); $i++){
+        for($i=2; $i<count($avatars); $i++){
             if ($utilisateur[avatar] == $avatars[$i]){
                 echo "<label>";
                 echo "<input type=\"radio\" checked=\"checked\" name=\"avatar\" value=\"".$avatars[$i]."\">\n";
@@ -51,8 +51,7 @@
                 echo "<input type=\"radio\" name=\"avatar\" value=\"".$avatars[$i]."\">\n";
                 echo "<img src=\"avatars/".$avatars[$i]."\" alt=\"".$avatars[$i]."\">\n";
                 echo "</label>";
-            }
-            
+            }            
         }
     }
     
