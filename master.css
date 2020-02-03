@@ -257,10 +257,6 @@ main{
 	font-size: 1.7em;
 }
 
-.header-main h2:hover{
-	cursor: pointer;
-}
-
 .header-main h2 .sous-titre{
 	display: block;
 	font-size: 0.6em;

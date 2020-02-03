@@ -25,4 +25,4 @@ function swap(){
 
   }
 
-  document.querySelector("h2").addEventListener('click', swap);  
+  //document.querySelector("h2").addEventListener('click', swap);  
