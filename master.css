@@ -222,10 +222,18 @@ footer{
 	width: 100vw;
 	height: 50px;
 	text-align: center;
+	display: grid;
+	grid-template-columns: auto 50px;
 }
 
 footer p{
-	padding: 30px 5px;
+	padding: 0px 10px;
+}
+
+footer .animation-pixel{
+	background-color: red;
+	width: 100%;
+	height: 100%;
 }
 
 /* Formulaires */
@@ -251,6 +259,11 @@ main{
 
 .header-main h2:hover{
 	cursor: pointer;
+}
+
+.header-main h2 .sous-titre{
+	display: block;
+	font-size: 0.6em;
 }
 
 	/*Calendrier*/
@@ -354,6 +367,7 @@ main{
 	display: grid;
 	grid-template-columns: 1fr 4fr;
 	margin: 5px;
+	margin-bottom: 20px;
 }
 
 .input-humeur{

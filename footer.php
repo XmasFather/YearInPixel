@@ -1,3 +1,4 @@
 <footer>
-    <p>Proudly designed by Philaé, Myrial & Quentin in California</p>
+    <p>Proudly designed by Philaé, Myrial & Quentin in P-City</p>
+    <div class="animation-pixel"></div>
   </footer>

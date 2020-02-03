@@ -39,7 +39,7 @@
         ?>
         <main>
             <header class="header-main">
-                <h2>Envie de changer vos humeurs ?</h2>
+                <h2>Envie de changer vos humeurs ?<span class="sous-titre">(Cliquez pour modifier vos humeurs)</span></h2>
             </header>
             <form action="envoi-modification-humeur.php" method="post">
             <?php
