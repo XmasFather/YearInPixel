@@ -48,8 +48,8 @@ else{
       <nav role="navigation">
         
       </nav>
-      <a href="yearinpixel.php?mois=<?=$mois_precedent?>&amp;?annee=<?=$annee_precedente?>">Mois prédécent</a>
-      <a href="yearinpixel.php?mois=<?=$mois_suivant?>&amp;?annee=<?=$annee_suivante?>">Mois suivant</a>
+      <a href="yearinpixel.php?mois=<?=$mois_precedent?>&amp;annee=<?=$annee_precedente?>">Mois prédécent</a>
+      <a href="yearinpixel.php?mois=<?=$mois_suivant?>&amp;annee=<?=$annee_suivante?>">Mois suivant</a>
       <h2>Mois <--> Année</h2>
     </header>
     <!--Mois ou année géneré à partir du changement -->

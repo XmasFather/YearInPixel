@@ -62,3 +62,30 @@
         $bonjour = array_rand($listeBonjour, 1);
         echo "<h3 class=\"bonjour\">".$listeBonjour[$bonjour]." ".$utilisateur[pseudo]." !"."</h3>";
     }
+
+    function genererMois($mois_actuel, $annee_actuelle){
+
+
+        date_default_timezone_set('Europe/Paris');
+
+        $compteur_affichage_mois = 0;
+        
+        $premier_jour = $annee_actuelle."-".$mois_actuel."-01";
+        $bon_format=strtotime ($premier_jour);
+        $numero_semaine = date('W',$bon_format);
+        $debut = date("l d/m/Y", strtotime($annee_actuelle."W".$numero_semaine));
+        $date_objet = DateTime::createFromFormat('l d/m/Y', $debut);
+        $test = $date_objet->format('l d/m/Y');
+
+        for($compteur_affichage_mois = 1; $compteur_affichage_mois <= 35; $compteur_affichage_mois++){
+          $contenu = $test;
+          $case = "<li data-date=\"".$contenu."\" class=\"mois\">".$contenu."</li>";
+          echo $case;
+
+          //$debut = date('l d/m/Y', strtotime($debut . ' +1 day'));
+          $date_objet->modify('+1 day');
+          $test=$date_objet->format('l d/m/Y');
+        }
+        
+        
+      }
