@@ -21,5 +21,5 @@
         'id' => $id));
 
     sleep(0.5);
-    header('location:index.php');
+    header('location:accueil.php');
     exit();

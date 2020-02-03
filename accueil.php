@@ -66,8 +66,8 @@
     <main>
         <header class="header-main">
             <h2>Mois <--> Année</h2>
-            <a href="index.php?mois=<?=$mois_precedent?>&amp;annee=<?=$annee_precedente?>">Mois prédécent</a>
-            <a href="index.php?mois=<?=$mois_suivant?>&amp;annee=<?=$annee_suivante?>">Mois suivant</a>
+            <a href="accueil.php?mois=<?=$mois_precedent?>&amp;annee=<?=$annee_precedente?>">Mois prédécent</a>
+            <a href="accueil.php?mois=<?=$mois_suivant?>&amp;annee=<?=$annee_suivante?>">Mois suivant</a>
         </header>
         <section class="calendrier">
         <ul id="nom-jours" class="">

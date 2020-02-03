@@ -29,5 +29,5 @@
             'id' => $humeursutilisateur[$i]['id'])); 
     }
 
-    header('location:index.php');
+    header('location:accueil.php');
     exit();
