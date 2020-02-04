@@ -76,10 +76,12 @@
         $debut = date("l d/m/Y", strtotime($annee_actuelle."W".$numero_semaine));
         $date_objet = DateTime::createFromFormat('l d/m/Y', $debut);
         $test = $date_objet->format('l d/m/Y');
+        
 
         for($compteur_affichage_mois = 1; $compteur_affichage_mois <= 35; $compteur_affichage_mois++){
-          $contenu = $test;
-          $case = "<li data-date=\"".$contenu."\" class=\"mois\">".$contenu."</li>";
+            $contenu = $test;
+            $datedujour = $date_objet->format('Y-m-d');
+          $case = "<li data-date=\"".$contenu."\" class=\"mois\"><a href=\"selection-humeur.php?date-du-jour=$datedujour\" class=\"lien-modif-humeur\"></a></li>";
           echo $case;
 
           //$debut = date('l d/m/Y', strtotime($debut . ' +1 day'));

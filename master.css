@@ -106,6 +106,55 @@ table {
 	color: var(--color-10);
 }
 
+/*COULEURS SVG*/
+
+.fill-0{
+	fill: var(--color-0);
+  }
+  
+  .fill-1{
+	fill: var(--color-1);
+  }
+  
+  .fill-2{
+	fill: var(--color-2);
+  }
+  
+  .fill-3{
+	fill: var(--color-3);
+  }
+  
+  .fill-4{
+	fill: var(--color-4);
+  }
+  
+  .fill-5{
+	fill: var(--color-5);
+  }
+  
+  .fill-6{
+	fill: var(--color-6);
+  }
+  
+  .fill-7{
+	  fill: var(--color-7);
+	}
+  
+  .fill-8{
+	  fill: var(--color-8);
+  }
+  
+  .fill-9{
+	  fill: var(--color-9);
+  }
+  
+  .fill-10{
+	fill: var(--color-10);
+}
+.stroke-1{
+	stroke: var(--color-4);
+}
+
 /*HUMEURS*/
 
 .couleur-humeur-0{
@@ -159,7 +208,6 @@ table {
 	margin: 10px;
 }
 
-
 /**/
 
 html{
@@ -169,6 +217,20 @@ html{
 a, a:visited{
 	color: #333333;
 	text-decoration: none;
+}
+
+/*STYLES RÉUTILISABLES*/
+
+.centrer-elmt{
+	margin:auto;
+}
+
+.centrer-txt{
+	text-align:center;
+}
+
+.largeur-icone{
+	max-width:70px;
 }
 
 /*CORPS DE PAGE*/ /*Mobile First*/
@@ -250,6 +312,9 @@ main{
 	/*Header du main*/
 .header-main{
 	margin-bottom: 30px;
+	display:grid;
+	grid-template-columns:auto auto auto;
+	align-content:center;
 }
 
 .header-main h2{
@@ -284,6 +349,20 @@ main{
 .calendrier ul{
 	margin: 0;
 	padding: 0;
+}
+
+.lien-modif-humeur{
+	display:block;
+	margin:0;
+	padding:0;
+	height:100%;
+	width:100%;
+	background-color:black;
+	opacity:0;
+}
+
+.lien-modif-humeur:hover{
+	opacity:0.1;
 }
 
 /*Entete du calendrier qui varie en fonction de l'affichage mois-année*/
