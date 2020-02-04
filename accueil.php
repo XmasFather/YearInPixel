@@ -104,7 +104,10 @@
                     "11" => "Novembre",
                     "12" => "Décembre",
                 );
+
+                
             ?>
+
 
             <h2 class="centrer-txt"><?=$mois_fr[$mois_actuel]?> <?=$annee_actuelle?></h2>
 
@@ -177,9 +180,9 @@
             <li>30</li>
             <li>31</li>
         </ul>
-        
+
         <ul id="liste-jours" class="mois">
-            <?=genererMois($mois_actuel,$annee_actuelle);?>
+            <?=genererMois($mois_actuel,$annee_actuelle, $bdd ,$id);?>
         </ul>
         
         </section>

@@ -1,35 +1,63 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="color.css">
-    <link rel="stylesheet" href="master.css">
-    <link rel="stylesheet" href="compte-utilisateur.css">
-    <link rel="icon" href="favicon.ico" />
-    <title>Year in Pixel</title>
-</head>
+<?php
+    session_start();
+    $id = $_SESSION['id'];
+    $pseudo = $_SESSION['pseudo'];
+    /* Importation des fonctions nécessaires à la page */
+    require('functions.php');    
+     /* Connexion à la BDD */
+     $hostname = "localhost";
+     $database = "mwe20_qmarolle_yip";
+     $username = "mwe20_qmarolle";
+     $password = 'AjnfDIoiJC8vLNA';
+     $bdd = new PDO("mysql:host=$hostname;dbname=$database",	$username, $password,array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8'"));
+ 
+     /* Récupération de l'utilisateur  à modifier à terme */
+     if($id == NULL){
+         header('location:connexion.php');
+         exit();
+     }
+     /* */
+     $utilisateur = $bdd->query("SELECT * FROM utilisateur WHERE id = $id");
+     /* Change l'état de $utilisateur pour le rendre manipulable */
+     $utilisateur = $utilisateur->fetch();
+
+     $datedujour = $_GET['date-du-jour'];
+?>
+<?php   
+    /* On appelle le head qui gère toutes infos relative à la page */
+    include('head.php');
+?>
+<style>
+    <?php 
+        /* Récupération des couleurs personnalisées en fonction des humeurs de l'utilisateur */
+        miseEnPlaceCouleur($bdd, $utilisateur[id]);
+    ?>
+</style>
 <body>
-    <header class="header-principal">
-        <h1>Year In <span class="couleur-1">P</span><span class="couleur-2">i</span><span class="couleur-3">x</span><span class="couleur-4">e</span><span class="couleur-5">l</span><span class="couleur-6">s</span>
-        </h1>
-    </header> 
-   <main class="main-selecteur-humeur">
-        <h2 class="titre-compte">comment allez-vous aujourd'hui ?</h2>
-        <section class="humeur">
-            <ul class="selecteur-humeur">
-              <li><div class="carre-couleur-humeur couleur-humeur-1"></div> Heureux</li>
-              <li><div class="carre-couleur-humeur couleur-humeur-2"></div> Enthousiaste</li>
-              <li><div class="carre-couleur-humeur couleur-humeur-3"></div> Normal</li>
-              <li><div class="carre-couleur-humeur couleur-humeur-4"></div> Enervé</li>
-              <li><div class="carre-couleur-humeur couleur-humeur-5"></div> Stressé</li>
-              <li><div class="carre-couleur-humeur couleur-humeur-6"></div> Triste</li>
-            </ul>
-          </section>
-    </main>
-   <footer>
-    <p>Proudly designed by Philaé, Myrial & Quentin in California</p>
-  </footer>
+    <div class="conteneur">
+        <?php 
+            /* On appelle le header qui sera commun à toutes nos pages */
+            include('header.php');
+        ?>
+        <main>
+            <header class="header-main">
+                <h2>Comment vous sentez-vous aujourd'hui ?</h2>
+            </header>
+            <form action="envoi-humeur.php?date-du-jour=<?=$datedujour?>" method="post">
+            <?php
+                choixHumeur($bdd, $id);
+            ?>
+            <input class="bouton-modification bouton-humeur" type="submit" value="Valider"/>
+            </form>
+            
+        </main>
+        <?php 
+            /* On appelle le footer qui sera commun à toutes nos pages */
+            include('footer.php');
+        ?>
+    </div>
+
+<script type="text/javascript" src="script.js"></script>
+    
 </body>
 </html>

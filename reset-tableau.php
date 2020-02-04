@@ -16,18 +16,9 @@
     $password = 'AjnfDIoiJC8vLNA';
     $bdd = new PDO("mysql:host=$hostname;dbname=$database",	$username, $password,array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8'"));
 
-    $humeursutilisateur = $bdd->query("SELECT id FROM humeur WHERE utilisateur_id = $id");
-    $humeursutilisateur = $humeursutilisateur->fetchAll();
-    
-    for($i=0; $i<=count($humeursutilisateur); $i++){
-        $req = $bdd->prepare("UPDATE humeur SET intitule = :intitule, couleur = :couleur WHERE id = :id");
-        $req->execute(array(
-            'intitule' => $_POST['humeur-'.$i],
-            'couleur' => substr($_POST['couleur-'.$i], 1, 6),
-            'id' => $humeursutilisateur[$i-1]['id'])); 
-    }
-    
+    $req = $bdd->prepare("DELETE FROM pixel WHERE utilisateur_id = :id");
+    $req->execute(array(
+        'id' => $id)); 
 
-    sleep(0.5);
-    header('location:modification-humeur.php');
+    header('location:accueil.php');
     exit();

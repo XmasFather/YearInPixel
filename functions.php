@@ -54,6 +54,18 @@
             }            
         }
     }
+
+    function choixHumeur($bdd, $idUtilisateur){
+        $couleurs = $bdd->query("SELECT * FROM humeur WHERE utilisateur_id = $idUtilisateur");
+        $compteur = 0;
+        foreach($couleurs as $humeur){
+            $compteur ++;
+            echo "<input type=\"radio\" id=\"".$humeur[intitule]."\" name=\"humeur\" value=\"".$humeur['id']."\">\n";
+            echo "<label for=\"".$humeur[intitule]."\">";
+            echo "  <li><div class=\"carre-couleur-humeur couleur-humeur-".$compteur."\"></div> ".$humeur[intitule]."</li> \n";
+            echo "</label>";
+        }
+    }
     
     /* Affichage d'un bonjour aléatoire */
 
@@ -62,8 +74,8 @@
         $bonjour = array_rand($listeBonjour, 1);
         echo "<h3 class=\"bonjour\">".$listeBonjour[$bonjour]." ".$utilisateur[pseudo]." !"."</h3>";
     }
-
-    function genererMois($mois_actuel, $annee_actuelle){
+/*
+    function genererMois2($mois_actuel, $annee_actuelle){
 
 
         date_default_timezone_set('Europe/Paris');
@@ -87,7 +99,70 @@
           //$debut = date('l d/m/Y', strtotime($debut . ' +1 day'));
           $date_objet->modify('+1 day');
           $test=$date_objet->format('l d/m/Y');
+        }   
+      } */ 
+
+      function genererMois($mois_actuel, $annee_actuelle, $bdd, $idUtilisateur){
+
+
+        date_default_timezone_set('Europe/Paris');
+
+        $compteur_affichage_mois = 0;
+        
+        $premier_jour = $annee_actuelle."-".$mois_actuel."-01";
+        $bon_format=strtotime ($premier_jour);
+        $numero_semaine = date('W',$bon_format);
+        $debut = date("l d/m/Y", strtotime($annee_actuelle."W".$numero_semaine));
+        $date_objet = DateTime::createFromFormat('l d/m/Y', $debut);
+        $test = $date_objet->format('l d/m/Y');
+
+        /* Création du premier jour et dernier jour du mois pour récupération BDD */
+
+        $dateDebutMoisBDDobjet = DateTime::createFromFormat('l d/m/Y', $debut);
+        $dateDebutMoisBDD = $dateDebutMoisBDDobjet->format('Y-m-d');
+        $dateDebutMoisBDDobjet->modify('+34 day');
+        $dateFinMoisBDD = $dateDebutMoisBDDobjet->format('Y-m-d');
+
+        /* Récupération des pixels liés à l'utilisateur entre la date de début et la date de fin */
+
+        $pixels = $bdd->prepare("SELECT * FROM pixel WHERE jour BETWEEN :dateDebut AND :dateFin AND utilisateur_id = :idUtilisateur");
+        $pixels->execute(array(
+            'dateDebut' => $dateDebutMoisBDD,
+            'dateFin' => $dateFinMoisBDD,
+            'idUtilisateur' => $idUtilisateur
+        ));
+
+        $humeurs = $bdd->prepare("SELECT id FROM humeur WHERE utilisateur_id = :idUtilisateur");
+        $humeurs->execute(array(
+            'idUtilisateur' => $idUtilisateur
+        ));
+
+        /* Création des tableaux associatifs pour faire le lien entre le jour et l'humeur liée au jour */
+
+        $dateVersId = array();
+        foreach($pixels as $pixel){
+            $dateVersId[$pixel['jour']] = $pixel['humeur_id'];
         }
+
+        $idVersCouleur = array();
+        $compteur = 0;
+        foreach($humeurs as $humeur){
+            $compteur++;
+           $idVersCouleur[ $humeur['id']] = "couleur-humeur-".$compteur;
+        }  
         
-        
+        /* Affichage de la liste du jour en fonction du mois sur lequel on est  */
+
+        for($compteur_affichage_mois = 1; $compteur_affichage_mois <= 35; $compteur_affichage_mois++){
+            $contenu = $test;
+            $datedujour = $date_objet->format('Y-m-d');
+            
+          $case = "<li data-date=\"".$contenu."\" class=\"mois ".$idVersCouleur[$dateVersId[$datedujour]]."\"><a href=\"selection-humeur.php?date-du-jour=$datedujour\" class=\"lien-modif-humeur\" ></a></li>";
+          echo $case;
+
+          //$debut = date('l d/m/Y', strtotime($debut . ' +1 day'));
+          $date_objet->modify('+1 day');
+          $test=$date_objet->format('l d/m/Y');
+        }
+               
       }

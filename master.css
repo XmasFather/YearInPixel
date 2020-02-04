@@ -313,13 +313,14 @@ main{
 .header-main{
 	margin-bottom: 30px;
 	display:grid;
-	grid-template-columns:auto auto auto;
+	grid-template-columns:20% auto 20%;
 	align-content:center;
 }
 
 .header-main h2{
 	margin-left: 10px;
 	font-size: 1.7em;
+	grid-column: 2;
 }
 
 .header-main h2 .sous-titre{
@@ -496,7 +497,7 @@ main{
 }
 
 /* HIDE RADIO */
-[type=radio] { 
+.liste-avatars [type=radio] { 
 	position: absolute;
 	opacity: 0;
 	width: 0;
@@ -504,12 +505,12 @@ main{
   }
   
   /* IMAGE STYLES */
-  [type=radio] + img {
+.liste-avatars  [type=radio] + img {
 	cursor: pointer;
   }
   
   /* CHECKED STYLES */
-  [type=radio]:checked + img {
+.liste-avatars [type=radio]:checked + img {
 	outline: 3px solid var(--color-1);
 	outline-offset: 5px;
   }
