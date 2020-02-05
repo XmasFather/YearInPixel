@@ -358,14 +358,25 @@ main{
 	padding:0;
 	height:100%;
 	width:100%;
-	background-color:black;
-	opacity:0;
+	
 }
 
 .lien-modif-humeur:hover{
+	background-color:black;
 	opacity:0.1;
 }
 
+.numero-jour{
+	font-family: "Minecraft";
+	position: absolute;
+	bottom: 0;
+	right: 5px;
+	color: #888;
+}
+
+.mois-actuel{
+	color: var(--color-text);
+}
 /*Entete du calendrier qui varie en fonction de l'affichage mois-année*/
 
 #nom-jours{

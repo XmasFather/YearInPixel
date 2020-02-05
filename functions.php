@@ -116,11 +116,27 @@
         $date_objet = DateTime::createFromFormat('l d/m/Y', $debut);
         $test = $date_objet->format('l d/m/Y');
 
-        /* Création du premier jour et dernier jour du mois pour récupération BDD */
+        /* Test si le nombre de jours va déborder  */
 
+        $calculNombreJour = DateTime::createFromFormat('l d/m/Y', $debut);
+        $calculNombreJour->modify('+34 day');
+        $jourFin = $calculNombreJour->format('m');
+        
+        if ($jourFin == $mois_actuel){
+            /* Cas ou a besoin de 42 cases */
+            $nombreJoursdansMois = 42;
+            $nombreJoursdansMoisBDD = '+41 day';
+        }
+        else{
+            /* Cas ou on a besoin de 35 cases */
+            $nombreJoursdansMois = 35;
+            $nombreJoursdansMoisBDD = '+34 day';
+        }
+
+        /* Création du premier jour et dernier jour du mois pour récupération BDD */
         $dateDebutMoisBDDobjet = DateTime::createFromFormat('l d/m/Y', $debut);
         $dateDebutMoisBDD = $dateDebutMoisBDDobjet->format('Y-m-d');
-        $dateDebutMoisBDDobjet->modify('+34 day');
+        $dateDebutMoisBDDobjet->modify($nombreJoursdansMoisBDD);
         $dateFinMoisBDD = $dateDebutMoisBDDobjet->format('Y-m-d');
 
         /* Récupération des pixels liés à l'utilisateur entre la date de début et la date de fin */
@@ -153,16 +169,24 @@
         
         /* Affichage de la liste du jour en fonction du mois sur lequel on est  */
 
-        for($compteur_affichage_mois = 1; $compteur_affichage_mois <= 35; $compteur_affichage_mois++){
+        for($compteur_affichage_mois = 1; $compteur_affichage_mois <= $nombreJoursdansMois; $compteur_affichage_mois++){
             $contenu = $test;
             $datedujour = $date_objet->format('Y-m-d');
+            $jourActuel = $date_objet->format('d');
+            $moisdujour = $date_objet->format('m');
+
+            if ($moisdujour == $mois_actuel){
+                $case = "<li data-date=\"".$contenu."\" class=\"mois ".$idVersCouleur[$dateVersId[$datedujour]]."\"><a href=\"selection-humeur.php?date-du-jour=$datedujour\" class=\"lien-modif-humeur\" > <span class=\"numero-jour mois-actuel\">".$jourActuel."</span> </a></li>";
+            }
+            else{
+                $case = "<li data-date=\"".$contenu."\" class=\"mois ".$idVersCouleur[$dateVersId[$datedujour]]."\"><a href=\"selection-humeur.php?date-du-jour=$datedujour\" class=\"lien-modif-humeur\" > <span class=\"numero-jour\">".$jourActuel."</span> </a></li>";
+            }
             
-          $case = "<li data-date=\"".$contenu."\" class=\"mois ".$idVersCouleur[$dateVersId[$datedujour]]."\"><a href=\"selection-humeur.php?date-du-jour=$datedujour\" class=\"lien-modif-humeur\" ></a></li>";
+          
           echo $case;
 
           //$debut = date('l d/m/Y', strtotime($debut . ' +1 day'));
           $date_objet->modify('+1 day');
           $test=$date_objet->format('l d/m/Y');
-        }
-               
+        }               
       }
