@@ -377,6 +377,12 @@ main{
 .mois-actuel{
 	color: var(--color-text);
 }
+
+.emoji{
+	display: block;
+	padding-top: 20px;
+	font-size: 1.3em;
+}
 /*Entete du calendrier qui varie en fonction de l'affichage mois-année*/
 
 #nom-jours{

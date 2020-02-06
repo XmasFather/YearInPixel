@@ -156,8 +156,10 @@
         /* Création des tableaux associatifs pour faire le lien entre le jour et l'humeur liée au jour */
 
         $dateVersId = array();
+        $dateVersEmoji = array();
         foreach($pixels as $pixel){
             $dateVersId[$pixel['jour']] = $pixel['humeur_id'];
+            $dateVersEmoji[$pixel['jour']] = $pixel['symbole'];
         }
 
         $idVersCouleur = array();
@@ -176,10 +178,10 @@
             $moisdujour = $date_objet->format('m');
 
             if ($moisdujour == $mois_actuel){
-                $case = "<li data-date=\"".$contenu."\" class=\"mois ".$idVersCouleur[$dateVersId[$datedujour]]."\"><a href=\"selection-humeur.php?date-du-jour=$datedujour\" class=\"lien-modif-humeur\" > <span class=\"numero-jour mois-actuel\">".$jourActuel."</span> </a></li>";
+                $case = "<li data-date=\"".$contenu."\" class=\"mois ".$idVersCouleur[$dateVersId[$datedujour]]."\"><a href=\"selection-humeur.php?date-du-jour=$datedujour\" class=\"lien-modif-humeur\" > <span class=\"emoji\">".$dateVersEmoji[$datedujour]."</span> <span class=\"numero-jour mois-actuel\">".$jourActuel."</span> </a></li>";
             }
             else{
-                $case = "<li data-date=\"".$contenu."\" class=\"mois ".$idVersCouleur[$dateVersId[$datedujour]]."\"><a href=\"selection-humeur.php?date-du-jour=$datedujour\" class=\"lien-modif-humeur\" > <span class=\"numero-jour\">".$jourActuel."</span> </a></li>";
+                $case = "<li data-date=\"".$contenu."\" class=\"mois ".$idVersCouleur[$dateVersId[$datedujour]]."\"><a href=\"selection-humeur.php?date-du-jour=$datedujour\" class=\"lien-modif-humeur\" > <span class=\"emoji\">".$dateVersEmoji[$datedujour]."</span> <span class=\"numero-jour\">".$jourActuel."</span> </a></li>";
             }
             
           
