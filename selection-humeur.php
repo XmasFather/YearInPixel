@@ -44,9 +44,11 @@
                 <h2>Comment vous sentez-vous aujourd'hui ?</h2>
             </header>
             <form action="envoi-humeur.php?date-du-jour=<?=$datedujour?>" method="post">
-            <?php
-                choixHumeur($bdd, $id);
-            ?>
+            <ul class="selection-humeur-du-jour" >
+                <?php
+                    choixHumeur($bdd, $id);
+                ?>
+            </ul>
             <input class="bouton-modification bouton-humeur" type="submit" value="Valider"/>
             </form>
             

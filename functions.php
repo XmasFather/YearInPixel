@@ -60,10 +60,12 @@
         $compteur = 0;
         foreach($couleurs as $humeur){
             $compteur ++;
+            echo "<li> \n";
             echo "<input type=\"radio\" id=\"".$humeur[intitule]."\" name=\"humeur\" value=\"".$humeur['id']."\">\n";
-            echo "<label for=\"".$humeur[intitule]."\">";
-            echo "  <li><div class=\"carre-couleur-humeur couleur-humeur-".$compteur."\"></div> ".$humeur[intitule]."</li> \n";
+            echo "<label for=\"".$humeur[intitule]."\"> \n";
+            echo "  <div class=\"carre-couleur-humeur couleur-humeur-".$compteur."\"></div> ".$humeur[intitule]."\n";
             echo "</label>";
+            echo "</li> \n"; 
         }
     }
     
@@ -191,4 +193,10 @@
           $date_objet->modify('+1 day');
           $test=$date_objet->format('l d/m/Y');
         }               
+      }
+
+      function genererAnnee($annee_actuelle, $bdd, $idUtilisateur){
+
+        date_default_timezone_set('Europe/Paris');
+    
       }

@@ -263,7 +263,7 @@ body{
 
 h1{
 	font-family: Minecraft;
-	font-size: 2.5em;
+	font-size: 2em;
 	max-width: 500px;
 	margin: 20px auto;
 	padding-left: 10px;
@@ -284,18 +284,12 @@ footer{
 	width: 100vw;
 	height: 50px;
 	text-align: center;
-	display: grid;
-	grid-template-columns: auto 50px;
+	/*display: grid;
+	grid-template-columns: auto 50px;*/
 }
 
 footer p{
 	padding: 0px 10px;
-}
-
-footer .animation-pixel{
-	background-color: red;
-	width: 100%;
-	height: 100%;
 }
 
 /* Formulaires */
@@ -321,6 +315,7 @@ main{
 	margin-left: 10px;
 	font-size: 1.7em;
 	grid-column: 2;
+	text-align: center;
 }
 
 .header-main h2 .sous-titre{
@@ -358,7 +353,6 @@ main{
 	padding:0;
 	height:100%;
 	width:100%;
-	
 }
 
 .lien-modif-humeur:hover{
@@ -372,6 +366,7 @@ main{
 	bottom: 0;
 	right: 5px;
 	color: #888;
+	margin-right:0px;
 }
 
 .mois-actuel{
@@ -440,7 +435,6 @@ main{
 
 .liste-humeur li{
 	font-size: 1.7em;
-	font-weight: bold;
 }
 
 /* Formulaire page connexion et insciption */
@@ -480,15 +474,20 @@ main{
 .bouton-modification {
 	display: block;
     text-transform: uppercase;
-	font-size: 1em;
 	min-width: 200px;
 	margin: auto;
-	margin-top: 10px;
     padding: 7px;
-    background:#f5f5f5;
-	color:#555;
-	border-radius:2px;
-	border:1px solid #ccc;
+	margin-top: 10px;
+	border: solid 3px;
+    border-image: conic-gradient(var(--color-1), var(--color-2), var(--color-3), var(--color-4), var(--color-5), var(--color-6)) 1;
+    background-color: #fff8ed;
+    font-family: VT323, sans-serif;
+	font-size: 1.5em;
+}
+
+.bouton-modification:active {
+	background-color:#333333;
+	color:white;
 }
 
 .bouton-avatar{
@@ -496,8 +495,10 @@ main{
 }
 
 .bouton-humeur{
-	margin-top: 20px;
+	margin-top: 35px;
 }
+
+
 
 /* Modification avatars */
 
@@ -520,6 +521,13 @@ main{
 	width: 0;
 	height: 0;
   }
+
+.selection-humeur-du-jour [type=radio] { 
+	position: absolute;
+	opacity: 0;
+	width: 0;
+	height: 0;
+  }
   
   /* IMAGE STYLES */
 .liste-avatars  [type=radio] + img {
@@ -530,6 +538,16 @@ main{
 .liste-avatars [type=radio]:checked + img {
 	outline: 3px solid var(--color-1);
 	outline-offset: 5px;
+  }
+
+  .selection-humeur-du-jour label{
+	  display: block;
+	  font-size: 1.5em;
+  }
+
+  .selection-humeur-du-jour [type=radio]:checked + label {
+	outline: 3px solid var(--color-1);
+	outline-offset: -5px;
   }
 
 /* Animations CSS*/
@@ -651,11 +669,39 @@ main{
 
 /* Media query pour le desktop */
 
-@media screen and (min-width: 450px){
+@media screen and (min-width: 515px){
+	
 	h1{
 		font-size: 3em;
 		margin: 20px auto;
 		text-align: center;
 	}
 	
+}
+
+@media screen and (min-width: 420px){
+	
+	h1{
+		font-size: 3em;
+		margin: 20px auto;
+	}
+	
+}
+
+@media screen and (min-width: 370px){
+	
+	h1{
+		font-size: 2.5em;
+		margin: 20px auto;
+	}
+	
+}
+
+
+@media screen and (min-width: 1200px){
+	
+	.numero-jour{
+		margin-right:15px;
+	}
+
 }
