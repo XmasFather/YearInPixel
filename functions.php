@@ -198,5 +198,7 @@
       function genererAnnee($annee_actuelle, $bdd, $idUtilisateur){
 
         date_default_timezone_set('Europe/Paris');
-    
+        for ($i=1; $i <=300 ; $i++) { 
+            echo "<li class=\"jour-format-annee\"> 🍆 </li>";
+        }
       }

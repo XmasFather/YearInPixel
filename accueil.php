@@ -120,8 +120,8 @@
                 </svg>
             </a>
         </header>
-        <section class="calendrier">
-        <ul id="nom-jours" class="">
+        <section class="calendrier affichage-mois">
+        <ul id="nom-jours">
             <li>L</li>
             <li>M</li>
             <li>M</li>
@@ -129,56 +129,6 @@
             <li>V</li>
             <li>S</li>
             <li>D</li>
-        </ul>
-        
-        <ul id="nom-mois" class="hide">
-            <li>J</li>
-            <li>F</li>
-            <li>M</li>
-            <li>A</li>
-            <li>M</li>
-            <li>J</li>
-            <li>J</li>
-            <li>A</li>
-            <li>S</li>
-            <li>O</li>
-            <li>N</li>
-            <li>D</li>
-        </ul>
-        
-        <ul id="numero-jours" class="hide">
-            <li></li>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-            <li>6</li>
-            <li>7</li>
-            <li>8</li>
-            <li>9</li>
-            <li>10</li>
-            <li>11</li>
-            <li>12</li>
-            <li>13</li>
-            <li>14</li>
-            <li>15</li>
-            <li>16</li>
-            <li>17</li>
-            <li>18</li>
-            <li>19</li>
-            <li>20</li>
-            <li>21</li>
-            <li>22</li>
-            <li>23</li>
-            <li>24</li>
-            <li>25</li>
-            <li>26</li>
-            <li>27</li>
-            <li>28</li>
-            <li>29</li>
-            <li>30</li>
-            <li>31</li>
         </ul>
 
         <ul id="liste-jours" class="mois">

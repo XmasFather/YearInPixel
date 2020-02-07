@@ -323,28 +323,26 @@ main{
 	font-size: 0.6em;
 }
 
-	/*Calendrier*/
-.calendrier{
-	display: grid;
-	grid-template-columns: auto 1fr;
-	grid-template-rows: auto 1fr;
-	grid-template-areas: "numero-jours nom-mois-annee"
-						 "numero-jours liste-jours";
-}
-
+	/*Calendrier Affichage mois*/
 .calendrier > ul > li{
 	list-style-type: none;
-	border:solid;
-	border-width: 1px;
-	border-color:black;
 	text-align:center;
-	line-height: 3vh;
+	line-height: calc(3vh - 3px);
 	position:relative;
+	border: solid 1px black;
 }
 
 .calendrier ul{
 	margin: 0;
 	padding: 0;
+}
+
+.affichage-annee{
+	display: grid;
+	grid-template-columns: auto 1fr;
+	grid-template-rows: auto 1fr;
+	grid-template-areas: "numero-jours nom-mois"
+						 "numero-jours liste-jours";
 }
 
 .lien-modif-humeur{
@@ -359,7 +357,7 @@ main{
 	background-color:black;
 	opacity:0.1;
 }
-
+/* Numéro du jour en bas à droite dans l'affichage mois*/
 .numero-jour{
 	font-family: "Minecraft";
 	position: absolute;
@@ -372,22 +370,22 @@ main{
 .mois-actuel{
 	color: var(--color-text);
 }
-
+/* Emoji du jour si mis en place*/
 .emoji{
 	display: block;
 	padding-top: 20px;
 	font-size: 1.3em;
 }
+/**/
 /*Entete du calendrier qui varie en fonction de l'affichage mois-année*/
 
 #nom-jours{
-	grid-area: nom-mois-annee;
 	display: grid;
 	grid-template-columns: repeat(7, 1fr);
 }
 
 #nom-mois{
-	grid-area: nom-mois-annee;
+	grid-area: nom-mois;
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 }
@@ -407,7 +405,6 @@ main{
 
 #liste-jours.mois{
 	grid-template-columns: repeat(7, 1fr);
-	grid-template-rows: repeat(5, 1fr);
 }
 
 #liste-jours.mois >li{
@@ -416,6 +413,7 @@ main{
 
 #liste-jours.annee{
 	grid-template-columns: repeat(12, 1fr);
+	grid-auto-flow: column;
 	grid-template-rows: repeat(31, 1fr);
 }
 

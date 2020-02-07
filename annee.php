@@ -69,7 +69,7 @@
             </a>
         </header>
 
-        <section class="calendrier">
+        <section class="calendrier affichage-annee">
         <ul id="nom-mois">
             <li>J</li>
             <li>F</li>
@@ -86,7 +86,7 @@
         </ul>
         
         <ul id="numero-jours">
-            <li></li>
+            <li>.</li>
             <li>1</li>
             <li>2</li>
             <li>3</li>

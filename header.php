@@ -1,5 +1,5 @@
 <header class="header-principal">
-        <h1><a href="./">
+        <h1><a href="./accueil.php">
         Year In <span class="couleur-1">P</span><span class="couleur-2">i</span><span class="couleur-3">x</span><span class="couleur-4">e</span><span class="couleur-5">l</span><span class="couleur-6">s</span>
         </a></h1>      
             <nav role='navigation' id="menuToggle">
