@@ -376,6 +376,10 @@ main{
 	padding-top: 20px;
 	font-size: 1.3em;
 }
+
+.jour-inexistant{
+	border: none !important;
+}
 /**/
 /*Entete du calendrier qui varie en fonction de l'affichage mois-année*/
 

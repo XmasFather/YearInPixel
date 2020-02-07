@@ -195,10 +195,72 @@
         }               
       }
 
+
+      ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
       function genererAnnee($annee_actuelle, $bdd, $idUtilisateur){
 
         date_default_timezone_set('Europe/Paris');
-        for ($i=1; $i <=300 ; $i++) { 
-            echo "<li class=\"jour-format-annee\"> 🍆 </li>";
+
+        $debutAnnee = $annee_actuelle."-01-01";
+        $anneeSuivante = $annee_actuelle+1;
+        $finAnnee = $anneeSuivante."-01-01";
+
+        $debut = date("l d/m/Y", strtotime($debutAnnee));
+        $date_objet = DateTime::createFromFormat('l d/m/Y', $debut);
+        $test = $date_objet->format('l d/m/Y');
+
+        $dureeAnnee = (strtotime($finAnnee) - strtotime($debutAnnee));
+
+        $nombreJourAnnee = number_format($dureeAnnee/86400 ,0);
+
+        /* Récupération des pixels liés à l'utilisateur entre la date de début et la date de fin */
+
+        $pixels = $bdd->prepare("SELECT * FROM pixel WHERE jour BETWEEN :dateDebut AND :dateFin AND utilisateur_id = :idUtilisateur");
+        $pixels->execute(array(
+            'dateDebut' => $debutAnnee,
+            'dateFin' => $finAnnee,
+            'idUtilisateur' => $idUtilisateur
+        ));
+
+        $humeurs = $bdd->prepare("SELECT id FROM humeur WHERE utilisateur_id = :idUtilisateur");
+        $humeurs->execute(array(
+            'idUtilisateur' => $idUtilisateur
+        ));
+
+        /* Création des tableaux associatifs pour faire le lien entre le jour et l'humeur liée au jour */
+
+        $dateVersId = array();
+        $dateVersEmoji = array();
+        foreach($pixels as $pixel){
+            $dateVersId[$pixel['jour']] = $pixel['humeur_id'];
+            $dateVersEmoji[$pixel['jour']] = $pixel['symbole'];
         }
+
+        $idVersCouleur = array();
+        $compteur = 0;
+        foreach($humeurs as $humeur){
+            $compteur++;
+           $idVersCouleur[ $humeur['id']] = "couleur-humeur-".$compteur;
+        }
+
+        for ($mois=1; $mois <=12 ; $mois++) { 
+            for ($jours=1; $jours <= 31 ; $jours++) { 
+                $contenu = $test;
+                $datedujour = $date_objet->format('Y-m-d');
+                $datedujourComparaison = $date_objet->format('Y-n-j');
+                $jourAInserer = $annee_actuelle."-".$mois."-".$jours;
+
+                if($datedujourComparaison == $jourAInserer){
+                    $case = "<li data-date=\"".$datedujour."\" class=\"mois ".$idVersCouleur[$dateVersId[$datedujour]]."\"><a href=\"selection-humeur.php?date-du-jour=$datedujour\" class=\"lien-modif-humeur\" ></a></li>";
+                    $date_objet->modify('+1 day');
+                    $test=$date_objet->format('l d/m/Y');
+                }else{
+                    $case = "<li class=\"jour-inexistant\"></li>";
+                }    
+                echo $case; 
+            }
+        }
+
+        
       }
