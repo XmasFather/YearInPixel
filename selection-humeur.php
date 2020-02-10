@@ -44,26 +44,24 @@
                 <h2>Comment vous sentez-vous aujourd'hui ?</h2>
             </header>
             <form action="envoi-humeur.php?date-du-jour=<?=$datedujour?>" method="post">
-            <ul class="selection-humeur-du-jour" >
-                <?php
-                    choixHumeur($bdd, $id);
-                ?>
-            </ul>
-            <input class="bouton-modification bouton-humeur" type="submit" value="Valider"/>
+                <ul class="selection-humeur-du-jour">
+                    <?php
+                        choixHumeur($bdd, $id);
+                    ?>
+                </ul>
+                <h3>Quel emoji représente le mieux votre journée ?</h3>
+
+                <ul>
+                    <li onclick="add('💸')">💸</li>
+                    <li onclick="add('🎉')">🎉</li>
+                    <li onclick="add('🎁')">🎁</li>
+                    <li onclick="add('☎️')">☎️</li>
+                </ul>
+
+                <input readonly type="" id="emoji-selectionne-affichage" name="" required>
+
+                <input class="bouton-modification bouton-humeur" type="submit" value="Valider"/>
             </form>
-
-            <section class="emoji-picker">
-                <h2>Quel emoji représente le mieux votre journée ?</h2>
-                <div>
-                    <button onclick="add('💸')">💸</button>
-                    <button onclick="add('🎉')">🎉</button>
-                    <button onclick="add('🎁')">🎁</button>
-                    <button onclick="add('☎️')">☎️</button>
-                </div>
-
-                <textarea readonly rows="5" cols="30">
-                </textarea>
-            </section>
             
         </main>
         <?php 
@@ -73,7 +71,7 @@
     </div>
 
 <script type="text/javascript" src="script.js"></script>
-<script>const add = emoji => document.querySelector('textarea').value=emoji;</script>
+<script>const add = emoji => document.querySelector('#emoji-selectionne-affichage').value=emoji;</script>
     
 </body>
 </html>
