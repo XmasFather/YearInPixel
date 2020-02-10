@@ -51,6 +51,19 @@
             </ul>
             <input class="bouton-modification bouton-humeur" type="submit" value="Valider"/>
             </form>
+
+            <section class="emoji-picker">
+                <h2>Quel emoji représente le mieux votre journée ?</h2>
+                <div>
+                    <button onclick="add('💸')">💸</button>
+                    <button onclick="add('🎉')">🎉</button>
+                    <button onclick="add('🎁')">🎁</button>
+                    <button onclick="add('☎️')">☎️</button>
+                </div>
+
+                <textarea readonly rows="5" cols="30">
+                </textarea>
+            </section>
             
         </main>
         <?php 
@@ -60,6 +73,7 @@
     </div>
 
 <script type="text/javascript" src="script.js"></script>
+<script>const add = emoji => document.querySelector('textarea').value=emoji;</script>
     
 </body>
 </html>

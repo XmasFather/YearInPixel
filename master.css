@@ -669,6 +669,47 @@ main{
  }
  
 
+/*Emoji Picker*/
+
+.emoji-picker textarea{
+	max-width:75px;
+	max-height:75px;
+	font-size:4em;
+	resize:none;
+	text-align:center;
+	border:0;
+	overflow:hidden;
+	background-color:#fff8ed;
+	margin-top:20px;
+  }
+  
+  .emoji-picker{
+	text-align:center;
+	margin:auto;
+	width:300px;
+	margin-top:40px;
+  }
+  
+  .emoji-picker button{
+	width:60px;
+	height:50px;
+	font-size:1.5em;
+	border: solid 3px;
+	border-image: conic-gradient(var(--color-1), var(--color-2), var(--color-3), var(--color-4), var(--color-5), var(--color-6)) 1;
+	background-color: #fff8ed;
+  }
+  
+  .emoji-picker button:active{
+	background-color:#333333;
+  }
+
+  .emoji-picker h2{
+	margin-left: 10px;
+    font-size: 1.7em;
+	text-align: center;
+	margin-bottom:30px;
+  }
+
 /* Media query pour le desktop */
 
 @media screen and (min-width: 515px){
