@@ -14,13 +14,15 @@
     $database = "mwe20_qmarolle_yip";
     $username = "mwe20_qmarolle";
     $password = 'AjnfDIoiJC8vLNA';
-    $bdd = new PDO("mysql:host=$hostname;dbname=$database",	$username, $password,array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8'"));
+    $bdd = new PDO("mysql:host=$hostname;dbname=$database",	$username, $password,array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8MB4'"));
 
-    $req = $bdd->prepare("INSERT INTO pixel(jour, utilisateur_id, humeur_id) VALUES(:jour, :id, :humeur) ");
+
+    $req = $bdd->prepare("INSERT INTO pixel(jour, utilisateur_id, humeur_id, symbole) VALUES(:jour, :id, :humeur, :emoji) ");
     $req->execute(array(
         'jour' => $_GET['date-du-jour'],
         'id' => $id,
-        'humeur' => $_POST['humeur'] 
+        'humeur' => $_POST['humeur'],
+        'emoji' => $_POST['emoji']
     ));
 
     sleep(0.5);

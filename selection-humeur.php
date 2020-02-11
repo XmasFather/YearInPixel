@@ -51,14 +51,106 @@
                 </ul>
                 <h3>Quel emoji représente le mieux votre journée ?</h3>
 
-                <ul>
-                    <li onclick="add('💸')">💸</li>
-                    <li onclick="add('🎉')">🎉</li>
-                    <li onclick="add('🎁')">🎁</li>
-                    <li onclick="add('☎️')">☎️</li>
-                </ul>
+                    <ul class="emoji-picker">
+                        <li>
+                            <span onclick="changerPackEmoji(this)">💸</span>
+                            <ul class="hide">
+                                <li onclick="add('💸')">💸</li>
+                                <li onclick="add('🎉')">🎉</li>
+                                <li onclick="add('🎁')">🎁</li>
+                                <li onclick="add('☎️')">☎️</li>
+                                <li onclick="add('💸')">💸</li>
+                                <li onclick="add('🎉')">🎉</li>
+                                <li onclick="add('🎁')">🎁</li>
+                                <li onclick="add('☎️')">☎️</li>
+                                <li onclick="add('💸')">💸</li>
+                                <li onclick="add('🎉')">🎉</li>
+                                <li onclick="add('🎁')">🎁</li>
+                                <li onclick="add('☎️')">☎️</li>
+                                <li onclick="add('💸')">💸</li>
+                                <li onclick="add('🎉')">🎉</li>
+                                <li onclick="add('🎁')">🎁</li>
+                                <li onclick="add('☎️')">☎️</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span onclick="changerPackEmoji(this)">☎️</span>
+                            <ul>
+                            <li onclick="add('💸')">💸</li>
+                            <li onclick="add('🎉')">🎉</li>
+                                <li onclick="add('🎁')">🎁</li>
+                                <li onclick="add('☎️')">☎️</li>
+                                <li onclick="add('💸')">💸</li>
+                                <li onclick="add('🎉')">🎉</li>
+                                <li onclick="add('🎁')">🎁</li>
+                                <li onclick="add('☎️')">☎️</li>
+                                <li onclick="add('💸')">💸</li>
+                                <li onclick="add('🎉')">🎉</li>
+                                <li onclick="add('🎁')">🎁</li>
+                                <li onclick="add('☎️')">☎️</li>
+                                <li onclick="add('💸')">💸</li>
+                                <li onclick="add('🎉')">🎉</li>
+                                <li onclick="add('🎁')">🎁</li>
+                                <li onclick="add('☎️')">☎️</li>
+                                <li onclick="add('💸')">💸</li>
+                                <li onclick="add('🎉')">🎉</li>
+                                <li onclick="add('🎁')">🎁</li>
+                                <li onclick="add('☎️')">☎️</li>
+                                <li onclick="add('💸')">💸</li>
+                                <li onclick="add('🎉')">🎉</li>
+                                <li onclick="add('🎁')">🎁</li>
+                                <li onclick="add('☎️')">☎️</li>
+                                <li onclick="add('💸')">💸</li>
+                                <li onclick="add('🎉')">🎉</li>
+                                <li onclick="add('🎁')">🎁</li>
+                                <li onclick="add('☎️')">☎️</li>
+                                <li onclick="add('💸')">💸</li>
+                                <li onclick="add('🎉')">🎉</li>
+                                <li onclick="add('🎁')">🎁</li>
+                                <li onclick="add('☎️')">☎️</li>
+                                <li onclick="add('💸')">💸</li>
+                                <li onclick="add('🎉')">🎉</li>
+                                <li onclick="add('🎁')">🎁</li>
+                                <li onclick="add('☎️')">☎️</li>
+                                <li onclick="add('💸')">💸</li>
+                                
+                            </ul>
+                        </li>
+                        <li>
+                            <span onclick="changerPackEmoji(this)">🎁</span>
+                            <ul class="hide">
+                                <li onclick="add('💸')">💸</li>
+                                <li onclick="add('🎉')">🎉</li>
+                                <li onclick="add('🎁')">🎁</li>
+                                <li onclick="add('☎️')">☎️</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span onclick="changerPackEmoji(this)">🎉</span>
+                            <ul class="hide">
+                                <li onclick="add('💸')">💸</li>
+                                <li onclick="add('🎉')">🎉</li>
+                                <li onclick="add('🎁')">🎁</li>
+                                <li onclick="add('☎️')">☎️</li>
+                                <li onclick="add('🎁')">🎁</li>
+                                <li onclick="add('☎️')">☎️</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span onclick="changerPackEmoji(this)">💸</span>
+                            <ul class="hide">
+                                <li onclick="add('💸')">💸</li>
+                                <li onclick="add('🎉')">🎉</li>
+                                <li onclick="add('🎁')">🎁</li>
+                                <li onclick="add('☎️')">☎️</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="packs-emojis">+</a>
+                        </li>
+                    </ul>
 
-                <input readonly type="" id="emoji-selectionne-affichage" name="" required>
+                <input readonly type="text" id="emoji-selectionne-affichage" name="emoji" maxlength="1">
 
                 <input class="bouton-modification bouton-humeur" type="submit" value="Valider"/>
             </form>
@@ -72,6 +164,19 @@
 
 <script type="text/javascript" src="script.js"></script>
 <script>const add = emoji => document.querySelector('#emoji-selectionne-affichage').value=emoji;</script>
+<script>
+
+     function changerPackEmoji(monBouton){
+        var sibling = monBouton.nextElementSibling;
+        var tousBoutons = document.querySelectorAll('.emoji-picker ul');
+
+        for (var i = 0; i < tousBoutons.length; i++) {
+            tousBoutons[i].classList.add('hide');
+        }
+        
+        sibling.classList.remove('hide');
+     }
+</script>
     
 </body>
 </html>

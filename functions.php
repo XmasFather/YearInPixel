@@ -18,7 +18,7 @@
             $compteur ++;
             echo "<div class=\"humeur-a-modifier\">\n";
             echo "<input type=\"color\" class=\"input-couleur\" id=\"couleur-".$compteur."\" name=\"couleur-".$compteur."\" value=\"#".$humeur[couleur]."\">\n";
-            echo "<input type=\"text\" class=\"input-humeur\" id=\"humeur-".$compteur."\" name=\"humeur-".$compteur."\" value=\"".$humeur[intitule]."\">\n";
+            echo "<input type=\"text\" class=\"input-humeur\" id=\"humeur-".$compteur."\" name=\"humeur-".$compteur."\" value=\"".$humeur[intitule]."\"   maxlength=\"10\" >\n";
             echo "</div>\n";
         }
     }
@@ -252,7 +252,7 @@
                 $jourAInserer = $annee_actuelle."-".$mois."-".$jours;
 
                 if($datedujourComparaison == $jourAInserer){
-                    $case = "<li data-date=\"".$datedujour."\" class=\"mois ".$idVersCouleur[$dateVersId[$datedujour]]."\"><a href=\"selection-humeur.php?date-du-jour=$datedujour\" class=\"lien-modif-humeur\" ></a></li>";
+                    $case = "<li data-date=\"".$datedujour."\" class=\"mois ".$idVersCouleur[$dateVersId[$datedujour]]."\"><a href=\"selection-humeur.php?date-du-jour=$datedujour\" class=\"lien-modif-humeur\" > <span class=\"emoji\">".$dateVersEmoji[$datedujour]."</span> </a></li>";
                     $date_objet->modify('+1 day');
                     $test=$date_objet->format('l d/m/Y');
                 }else{
