@@ -280,6 +280,7 @@ h1 a{
 /*FOOTER*/
 
 footer{
+	margin-top: 20px;
 	grid-area: footer;
 	width: 100vw;
 	height: 50px;
@@ -757,10 +758,14 @@ main{
 }
 #affichage-emoji[type="checkbox"]:not(:checked) + label,
 #affichage-emoji[type="checkbox"]:checked + label {
+	display: block;
+	width: 0px;
+	margin: auto;
 	position: relative;
 	padding-left: 75px;
 	cursor: pointer;
-	margin-left: 5px;
+	margin-top: 5px;
+	margin-bottom: 15px;
 }
 #affichage-emoji[type="checkbox"]:not(:checked) + label:before,
 #affichage-emoji[type="checkbox"]:checked + label:before,

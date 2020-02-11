@@ -51,31 +51,74 @@
                 </ul>
                 <h3>Quel emoji représente le mieux votre journée ?</h3>
 
+
+<?php
+    /*$chaine_emoji = "😂 🤣 🤣 😃 😃 🤗 🤗 😚";
+
+    function genererPackEmoji($chaine_emoji){
+        echo '<li>
+            <span onclick="changerPackEmoji(this)">😀</span>
+            <ul>';
+            $liste_emojis = str_split($chaine_emoji);
+        foreach($liste_emojis as $affichage_final){
+            echo "<li onclick=\"add('".$affichage_final."')\">".$affichage_final."</li>";
+        }
+        echo "</ul></li>";
+    }*/
+?>
                     <ul class="emoji-picker">
+                    <?php
+                    
+                    /*genererPackEmoji($chaine_emoji);*/
+
+                    ?>
                         <li>
-                            <span onclick="changerPackEmoji(this)">💸</span>
-                            <ul class="hide">
-                                <li onclick="add('💸')">💸</li>
-                                <li onclick="add('🎉')">🎉</li>
-                                <li onclick="add('🎁')">🎁</li>
-                                <li onclick="add('☎️')">☎️</li>
-                                <li onclick="add('💸')">💸</li>
-                                <li onclick="add('🎉')">🎉</li>
-                                <li onclick="add('🎁')">🎁</li>
-                                <li onclick="add('☎️')">☎️</li>
-                                <li onclick="add('💸')">💸</li>
-                                <li onclick="add('🎉')">🎉</li>
-                                <li onclick="add('🎁')">🎁</li>
-                                <li onclick="add('☎️')">☎️</li>
-                                <li onclick="add('💸')">💸</li>
-                                <li onclick="add('🎉')">🎉</li>
-                                <li onclick="add('🎁')">🎁</li>
-                                <li onclick="add('☎️')">☎️</li>
+                            <span onclick="changerPackEmoji(this)">😀</span>
+                            <ul>
+                                <li onclick="add('😀')">😀</li>
+                                <li onclick="add('😁')">😁</li>
+                                <li onclick="add('😂')">😂</li>
+                                <li onclick="add('🤣')">🤣</li>
+                                <li onclick="add('😃')">😃</li>
+                                <li onclick="add('😄')">😄</li>
+                                <li onclick="add('😅')">😅</li>
+                                <li onclick="add('😊')">😊</li>
+                                <li onclick="add('😎')">😎</li>
+                                <li onclick="add('😍')">😍</li>
+                                <li onclick="add('😘')">😘</li>
+                                <li onclick="add('🥰')">🥰</li>
+                                <li onclick="add('🤗')">🤗</li>
+                                <li onclick="add('😑')">😑</li>
+                                <li onclick="add('🙄')">🙄</li>
+                                <li onclick="add('😏')">😏</li>
+                                <li onclick="add('😥')">😥</li>
+                                <li onclick="add('😮')">😮</li>
+                                
+                                <li onclick="add('😪')">😪</li>
+                                <li onclick="add('😴')">😴</li>
+                                <li onclick="add('😌')">😌</li>
+                                <li onclick="add('😜')">😜</li>
+                                <li onclick="add('🤤')">🤤</li>
+                                <li onclick="add('😒')">😒</li>
+                                <li onclick="add('😔')">😔</li>
+                                <li onclick="add('🙃')">🙃</li>
+                                <li onclick="add('😤')">😤</li>
+                                <li onclick="add('😭')">😭</li>
+                                
+                                <li onclick="add('🤮')">🤮</li>
+                                <li onclick="add('🤒')">🤒</li>
+                                <li onclick="add('🥳')">🥳</li>
+                                <li onclick="add('🥴')">🥴</li>
+                                
+                                <li onclick="add('🥵')">🥵</li>
+                                <li onclick="add('🥶')">🥶</li>
+                                <li onclick="add('🤯')">🤯</li>
+                                <li onclick="add('🥴')">🥴</li>
                             </ul>
                         </li>
                         <li>
                             <span onclick="changerPackEmoji(this)">☎️</span>
-                            <ul>
+                            <ul class="hide">
                             <li onclick="add('💸')">💸</li>
                             <li onclick="add('🎉')">🎉</li>
                                 <li onclick="add('🎁')">🎁</li>

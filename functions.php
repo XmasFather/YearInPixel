@@ -18,7 +18,7 @@
             $compteur ++;
             echo "<div class=\"humeur-a-modifier\">\n";
             echo "<input type=\"color\" class=\"input-couleur\" id=\"couleur-".$compteur."\" name=\"couleur-".$compteur."\" value=\"#".$humeur[couleur]."\">\n";
-            echo "<input type=\"text\" class=\"input-humeur\" id=\"humeur-".$compteur."\" name=\"humeur-".$compteur."\" value=\"".$humeur[intitule]."\"   maxlength=\"10\" >\n";
+            echo "<input type=\"text\" class=\"input-humeur\" id=\"humeur-".$compteur."\" name=\"humeur-".$compteur."\" value=\"".$humeur[intitule]."\"   maxlength=\"20\" >\n";
             echo "</div>\n";
         }
     }
