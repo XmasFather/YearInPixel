@@ -19,6 +19,7 @@
     $utilisateur = $bdd->query("SELECT * FROM utilisateur WHERE id=$id");
     /* Change l'état de $utilisateur pour le rendre manipulable */
     $utilisateur = $utilisateur->fetch();
+    $affichageEmoji = $utilisateur['affichageemoji'];
 
     /* Récupération du mois et de l'année */
     $annee_actuelle = isset($_GET["annee"]) ? $_GET['annee'] : date("Y");
@@ -141,6 +142,11 @@
     </div>
 
 <script type="text/javascript" src="script.js"></script>
+<?php
+    if($affichageEmoji == 0){
+        echo "<script>modificationAffichageEmoji();</script>";
+    }
+?>
     
 </body>
 </html>

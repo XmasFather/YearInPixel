@@ -8,7 +8,10 @@
                 <ul id="menu">
                     <li><?=bonjourAleatoire($utilisateur)?></li>
                     <li></li>
-                    <li>Activer les Emojis           </li>
+                    <li>Activer les Emojis
+                        <input type="checkbox" <?php if($affichageEmoji == true){echo "checked";}?> id="affichage-emoji" />
+                        <label onclick="modficationEtatEmoji()" for="affichage-emoji"><span class="ui"></span></label> 
+                    </li>
                     <li><a href="modification-humeur.php">Personnaliser vos humeurs</a></li>
                     <li><a href="modification-avatar.php">Changer votre avatar</a></li>
                     <li><a href="annee.php">Passage au format "année"</a></li>

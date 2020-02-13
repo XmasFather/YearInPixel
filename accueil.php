@@ -19,6 +19,7 @@
     $utilisateur = $bdd->query("SELECT * FROM utilisateur WHERE id=$id");
     /* Change l'état de $utilisateur pour le rendre manipulable */
     $utilisateur = $utilisateur->fetch();
+    $affichageEmoji = $utilisateur['affichageemoji'];
 
     /* Récupération du mois et de l'année */
 
@@ -107,14 +108,7 @@
 
                 
             ?>
-
-                <div>
-                    <h2 class="centrer-txt"><?=$mois_fr[$mois_actuel]?> <?=$annee_actuelle?> </h2>
-                    <input type="checkbox" checked="checked" id="affichage-emoji" />
-                    <label for="affichage-emoji"><span class="ui"></span></label> 
-                </div>
-            
-            
+                <h2 class="centrer-txt"><?=$mois_fr[$mois_actuel]?> <?=$annee_actuelle?> </h2>
 
             <a href="accueil.php?mois=<?=$mois_suivant?>&amp;annee=<?=$annee_suivante?>"  class="centrer-elmt largeur-icone">
                 <svg xmlns="http://www.w3.org/2000/svg" width="44.319" height="36.211" viewBox="0 0 44.319 36.211">
@@ -156,6 +150,11 @@
     </div>
 
 <script type="text/javascript" src="script.js"></script>
+<?php
+    if($affichageEmoji == 0){
+        echo "<script>modificationAffichageEmoji();</script>";
+    }
+?>
     
 </body>
 </html>

@@ -758,14 +758,10 @@ main{
 }
 #affichage-emoji[type="checkbox"]:not(:checked) + label,
 #affichage-emoji[type="checkbox"]:checked + label {
-	display: block;
-	width: 0px;
 	margin: auto;
 	position: relative;
-	padding-left: 75px;
 	cursor: pointer;
-	margin-top: 5px;
-	margin-bottom: 15px;
+	margin-left: 5px;
 }
 #affichage-emoji[type="checkbox"]:not(:checked) + label:before,
 #affichage-emoji[type="checkbox"]:checked + label:before,
@@ -776,9 +772,9 @@ main{
 }
 #affichage-emoji[type="checkbox"]:not(:checked) + label:before,
 #affichage-emoji[type="checkbox"]:checked + label:before {
-	left:0; top: -3px;
+	left:0; top: -6px;
 	width: 80px; height: 30px;
-	/*background: #FF9FBB;	*/
+	background: #CCCCCC;
 	border: solid 3px;
     border-image: conic-gradient(var(--color-1), var(--color-2), var(--color-3), var(--color-4), var(--color-5), var(--color-6)) 1;
 	-webkit-transition: background-color .2s;
@@ -792,17 +788,17 @@ main{
 	-moz-transition: all .2s;
 	-ms-transition: all .2s;
 	transition: all .2s;
-	top: 8px; left: 5px;
+	top: 6px; left: 5px;
 	font-size: 0.75em;
 	content: "🌈";
 }
 
 /* on checked */
 #affichage-emoji[type="checkbox"]:checked + label:before {
-	/*background:#E1C4FF; */
+	background: rgba(2, 159, 164, 0.534);
 }
 #affichage-emoji[type="checkbox"]:checked + label:after {
-	top: 8px; left: 50px;
+	top: 6px; left: 50px;
 	content: "😎";
 	font-size: 0.75em;
 }
@@ -814,7 +810,7 @@ main{
 	left: 6px;
 	width: 100px;
 	font-size: 14px;
-	line-height: 28px;
+	line-height: 25px;
 	-webkit-transition: all .2s;
 	-moz-transition: all .2s;
 	-ms-transition: all .2s;
