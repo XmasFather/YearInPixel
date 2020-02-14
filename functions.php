@@ -173,6 +173,8 @@
         
         /* Affichage de la liste du jour en fonction du mois sur lequel on est  */
 
+        $aujourdhui = date('Y-m-d');
+
         for($compteur_affichage_mois = 1; $compteur_affichage_mois <= $nombreJoursdansMois; $compteur_affichage_mois++){
             $contenu = $test;
             $datedujour = $date_objet->format('Y-m-d');
@@ -180,10 +182,19 @@
             $moisdujour = $date_objet->format('m');
 
             if ($moisdujour == $mois_actuel){
-                $case = "<li data-date=\"".$contenu."\" class=\"mois ".$idVersCouleur[$dateVersId[$datedujour]]."\"><a href=\"selection-humeur.php?date-du-jour=$datedujour\" class=\"lien-modif-humeur\" > <span class=\"emoji\">".$dateVersEmoji[$datedujour]."</span> <span class=\"numero-jour mois-actuel\">".$jourActuel."</span> </a></li>";
+                if($datedujour <= $aujourdhui){
+                    $case = "<li data-date=\"".$contenu."\" class=\"mois ".$idVersCouleur[$dateVersId[$datedujour]]."\"><a href=\"selection-humeur.php?date-du-jour=$datedujour\" class=\"lien-modif-humeur\" > <span class=\"emoji\">".$dateVersEmoji[$datedujour]."</span> <span class=\"numero-jour mois-actuel\">".$jourActuel."</span> </a></li>";
+                }else{
+                    $case = "<li data-date=\"".$contenu."\" class=\"jour-ulterieur mois ".$idVersCouleur[$dateVersId[$datedujour]]."\"><span class=\"emoji\">".$dateVersEmoji[$datedujour]."</span> <span class=\"numero-jour mois-actuel\">".$jourActuel."</span></li>";
+                }
             }
             else{
-                $case = "<li data-date=\"".$contenu."\" class=\"mois ".$idVersCouleur[$dateVersId[$datedujour]]."\"><a href=\"selection-humeur.php?date-du-jour=$datedujour\" class=\"lien-modif-humeur\" > <span class=\"emoji\">".$dateVersEmoji[$datedujour]."</span> <span class=\"numero-jour\">".$jourActuel."</span> </a></li>";
+                if($datedujour <= $aujourdhui){
+                    $case = "<li data-date=\"".$contenu."\" class=\"mois ".$idVersCouleur[$dateVersId[$datedujour]]."\"><a href=\"selection-humeur.php?date-du-jour=$datedujour\" class=\"lien-modif-humeur\" > <span class=\"emoji\">".$dateVersEmoji[$datedujour]."</span> <span class=\"numero-jour\">".$jourActuel."</span> </a></li>";
+                }else{
+                    $case = "<li data-date=\"".$contenu."\" class=\"jour-ulterieur mois ".$idVersCouleur[$dateVersId[$datedujour]]."\"> <span class=\"emoji\">".$dateVersEmoji[$datedujour]."</span> <span class=\"numero-jour\">".$jourActuel."</span></li>";
+                }
+                
             }
             
           
@@ -244,6 +255,8 @@
            $idVersCouleur[ $humeur['id']] = "couleur-humeur-".$compteur;
         }
 
+        $aujourdhui = date('Y-m-d');
+
         for ($mois=1; $mois <=12 ; $mois++) { 
             for ($jours=1; $jours <= 31 ; $jours++) { 
                 $contenu = $test;
@@ -252,7 +265,12 @@
                 $jourAInserer = $annee_actuelle."-".$mois."-".$jours;
 
                 if($datedujourComparaison == $jourAInserer){
-                    $case = "<li data-date=\"".$datedujour."\" class=\"mois ".$idVersCouleur[$dateVersId[$datedujour]]."\"><a href=\"selection-humeur.php?date-du-jour=$datedujour\" class=\"lien-modif-humeur\" > <span class=\"emoji\">".$dateVersEmoji[$datedujour]."</span> </a></li>";
+                    if($datedujour <= $aujourdhui){
+                        $case = "<li data-date=\"".$datedujour."\" class=\"mois ".$idVersCouleur[$dateVersId[$datedujour]]."\"><a href=\"selection-humeur.php?date-du-jour=$datedujour\" class=\"lien-modif-humeur\" > <span class=\"emoji\">".$dateVersEmoji[$datedujour]."</span> </a></li>";
+                    }else{
+                        $case = "<li data-date=\"".$datedujour."\" class=\"jour-ulterieur mois ".$idVersCouleur[$dateVersId[$datedujour]]."\"><span class=\"emoji\">".$dateVersEmoji[$datedujour]."</span></li>";
+                    }
+                    
                     $date_objet->modify('+1 day');
                     $test=$date_objet->format('l d/m/Y');
                 }else{

@@ -16,18 +16,22 @@
     $password = 'AjnfDIoiJC8vLNA';
     $bdd = new PDO("mysql:host=$hostname;dbname=$database",	$username, $password,array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8MB4'"));
 
-    $del = $bdd->prepare("DELETE FROM pixel WHERE jour = :jour AND utilisateur_id = :id");
-    $del->execute(array(
-        'jour' => $_GET['date-du-jour'],
-        'id' => $id
-    ));
-    $req = $bdd->prepare("INSERT INTO pixel(jour, utilisateur_id, humeur_id, symbole) VALUES(:jour, :id, :humeur, :emoji) ");
-    $req->execute(array(
-        'jour' => $_GET['date-du-jour'],
-        'id' => $id,
-        'humeur' => $_POST['humeur'],
-        'emoji' => $_POST['emoji']
-    ));
+    $aujourdhui = date('Y-m-d');
+
+    if($_GET['date-du-jour'] <= $aujourdhui){
+        $del = $bdd->prepare("DELETE FROM pixel WHERE jour = :jour AND utilisateur_id = :id");
+        $del->execute(array(
+            'jour' => $_GET['date-du-jour'],
+            'id' => $id
+        ));
+        $req = $bdd->prepare("INSERT INTO pixel(jour, utilisateur_id, humeur_id, symbole) VALUES(:jour, :id, :humeur, :emoji) ");
+        $req->execute(array(
+            'jour' => $_GET['date-du-jour'],
+            'id' => $id,
+            'humeur' => $_POST['humeur'],
+            'emoji' => $_POST['emoji']
+        ));
+    }    
 
     sleep(0.5);
     header('location:accueil.php');

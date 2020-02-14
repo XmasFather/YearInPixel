@@ -9,7 +9,7 @@
      $database = "mwe20_qmarolle_yip";
      $username = "mwe20_qmarolle";
      $password = 'AjnfDIoiJC8vLNA';
-     $bdd = new PDO("mysql:host=$hostname;dbname=$database",	$username, $password,array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8MB4'"));
+     $bdd = new PDO("mysql:host=$hostname;dbname=$database",	$username, $password,array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8'"));
  
      /* Récupération de l'utilisateur  à modifier à terme */
      if($id == NULL){
@@ -53,28 +53,28 @@
 
 
 <?php
-    /*$chaine_emoji = "😂 🤣 🤣 😃 😃 🤗 🤗 😚";
+    $chaine_emoji = "😂 🤣 🤣 😃 😃 🤗 🤗 😚";
 
     function genererPackEmoji($chaine_emoji){
         echo '<li>
             <span onclick="changerPackEmoji(this)">😀</span>
             <ul>';
-            $liste_emojis = str_split($chaine_emoji);
+            $liste_emojis = explode(" ", $chaine_emoji);
         foreach($liste_emojis as $affichage_final){
             echo "<li onclick=\"add('".$affichage_final."')\">".$affichage_final."</li>";
         }
         echo "</ul></li>";
-    }*/
+    }
 ?>
                     <ul class="emoji-picker">
                     <?php
                     
-                    /*genererPackEmoji($chaine_emoji);*/
+                    genererPackEmoji($chaine_emoji);
 
                     ?>
                         <li>
                             <span onclick="changerPackEmoji(this)">😀</span>
-                            <ul>
+                            <ul class="hide">
                                 <li onclick="add('😀')">😀</li>
                                 <li onclick="add('😁')">😁</li>
                                 <li onclick="add('😂')">😂</li>

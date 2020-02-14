@@ -422,6 +422,10 @@ main{
 	grid-template-rows: repeat(31, 1fr);
 }
 
+.jour-ulterieur{
+	background-color: #DDD;
+}
+
 /*Cacher les parties que nous n'avons pas besoin*/
 
 .hide{
