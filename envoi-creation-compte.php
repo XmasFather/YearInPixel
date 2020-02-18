@@ -9,18 +9,17 @@
     // Vérification de la validité des informations
 
     // Hachage du mot de passe
-    //$pass_hache = password_hash($_POST['pass'], PASSWORD_DEFAULT);
+    $pass_hache = crypt($_POST['motdepasse']);
 
     $email = $_POST['email'];
     $pseudo = $_POST['pseudo'];
-    $mdp = $_POST['motdepasse'];
 
     // Insertion
     $req = $bdd->prepare('INSERT INTO utilisateur(email, pseudo, motdepasse) VALUES(:email, :pseudo, :motdepasse)');
     $req->execute(array(
         'email' => $email,
         'pseudo' => $pseudo,
-        'motdepasse' => $mdp,));
+        'motdepasse' => $pass_hache,));
 
     $recuperationIdUtilisateur = $bdd->prepare("SELECT id FROM utilisateur WHERE pseudo = :pseudo");
     $recuperationIdUtilisateur->execute(array(
