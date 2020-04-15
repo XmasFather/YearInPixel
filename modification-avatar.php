@@ -40,7 +40,7 @@
     <main>
         <header class="header-main">
                 <h2>Que choisir comme avatar ?</h2>
-            </header>
+        </header>
         <form class="liste-avatars" action="envoi-modification-avatar.php" method="post">
             <?php
                 affichageAvatar("avatars", $utilisateur);

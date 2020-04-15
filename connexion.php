@@ -29,8 +29,9 @@
         </form>
         
    </main>
-   <footer>
-    <p>Proudly designed by Philaé, Myrial & Quentin in California</p>
-  </footer>
+   <?php 
+            /* On appelle le footer qui sera commun à toutes nos pages */
+            include('footer.php');
+    ?>
 </body>
 </html>

@@ -49,6 +49,13 @@ table {
 
 /************************************************************************/
 
+/* Mise en forme des sections globales du site (sauf calendrier)*/
+
+section{
+	width: 300px;
+	margin: auto;
+}
+
 /*FONTS*/
 @font-face{
 	font-family: "Minecraft";
@@ -325,6 +332,10 @@ main{
 }
 
 	/*Calendrier Affichage mois*/
+.calendrier{
+	width: auto;
+}
+
 .calendrier > ul > li{
 	list-style-type: none;
 	text-align:center;
@@ -563,6 +574,20 @@ main{
 	outline: 3px solid var(--color-1);
 	outline-offset: -5px;
   }
+
+/*Mon compte*/
+
+.info-compte{
+	background: red;
+}
+
+.modification-info-compte{
+	background: green;
+}
+
+
+
+
 
 /* Animations CSS*/
 

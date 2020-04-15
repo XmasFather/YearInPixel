@@ -80,7 +80,7 @@
                     ?>
                         
                         <li>
-                            <a href="packs-emojis">+</a>
+                            <a href="obtenir-packs-emojis.php">+</a>
                         </li>
                     </ul>
 

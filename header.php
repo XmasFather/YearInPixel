@@ -16,7 +16,7 @@
                     <li><a href="modification-avatar.php">Changer votre avatar</a></li>
                     <li><a href="annee.php">Passage au format "année"</a></li>
                     <li></li>
-                    <li><a href="deconnexion.php">Deconnexion</a></li>
+                    <li><a href="deconnexion.php">Déconnexion</a></li>
                 </ul>
             </nav>
     </header>
