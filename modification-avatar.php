@@ -5,7 +5,7 @@
     /* Importation des fonctions nécessaires à la page */
     require('functions.php');    
     require('connexion-bdd.php');
-     /* Récupération de l'utilisateur  à modifier à terme */
+    require('utilisateur.php'); 
      if($id == NULL){
          header('location:connexion.php');
          exit();

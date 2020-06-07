@@ -9,7 +9,7 @@
     }
     /* Importation des fonctions nécessaires à la page */
     require('functions.php');
-     require('connexion-bdd.php');
+    require('connexion-bdd.php');
     $req = $bdd->prepare("UPDATE utilisateur SET avatar = :avatar WHERE id = :id");
     $req->execute(array(
         'avatar' => $_POST['avatar'],

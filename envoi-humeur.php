@@ -9,7 +9,7 @@
     }
     /* Importation des fonctions nécessaires à la page */
     require('functions.php');
-     require('connexion-bdd.php');
+    require('connexion-bdd.php');
 
     $aujourdhui = date('Y-m-d');
 

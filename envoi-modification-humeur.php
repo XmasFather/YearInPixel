@@ -9,7 +9,7 @@
     }
     /* Importation des fonctions nécessaires à la page */
     require('functions.php');
-     require('connexion-bdd.php');
+    require('connexion-bdd.php');
 
     $humeursutilisateur = $bdd->query("SELECT id FROM humeur WHERE utilisateur_id = $id");
     $humeursutilisateur = $humeursutilisateur->fetchAll();

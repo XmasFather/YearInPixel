@@ -9,7 +9,7 @@
     }
     /* Importation des fonctions nécessaires à la page */
     require('functions.php');
-     require('connexion-bdd.php');
+    require('connexion-bdd.php');
 
     $valeurHumeurs = ['FF9FBB','E1C4FF','8BF9D0','FF8181','FFC84A','98FFFF'];
     $nomHumeurs = ['Heureux','Enthousiaste','Normal','Enervé','Stressé','Triste'];

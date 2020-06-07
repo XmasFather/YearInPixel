@@ -10,7 +10,7 @@
     /* Importation des fonctions nécessaires à la page */
     require('functions.php');
     require('connexion-bdd.php');
-
+    require('utilisateur.php'); 
 ?>
 <?php   
     /* On appelle le head qui gère toutes infos relative à la page */

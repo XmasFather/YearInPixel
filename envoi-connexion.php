@@ -1,7 +1,7 @@
 <?php 
     /* Importation des fonctions nécessaires à la page */
     require('functions.php');
-     require('connexion-bdd.php');
+    require('connexion-bdd.php');
 
 $pseudo = $_POST['pseudo'];
 

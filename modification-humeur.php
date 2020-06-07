@@ -4,9 +4,8 @@
     $pseudo = $_SESSION['pseudo'];
     /* Importation des fonctions nécessaires à la page */
     require('functions.php');    
-     /* Connexion à la BDD */
-     require('connexion-bdd.php');
-     /* Récupération de l'utilisateur  à modifier à terme */
+    require('connexion-bdd.php');
+    require('utilisateur.php'); 
      if($id == NULL){
          header('location:connexion.php');
          exit();
