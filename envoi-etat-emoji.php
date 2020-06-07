@@ -3,6 +3,7 @@
     $id = $_SESSION['id'];
     require('functions.php');
     require('connexion-bdd.php');
+    require('utilisateur.php'); 
 
     if($affichageEmoji == 1){
         $req = $bdd->prepare("UPDATE utilisateur SET affichageemoji = :booleenemoji WHERE id = :id");
