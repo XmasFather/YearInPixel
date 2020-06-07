@@ -11,10 +11,6 @@
          header('location:connexion.php');
          exit();
      }
-     /* */
-     $utilisateur = $bdd->query("SELECT * FROM utilisateur WHERE id = $id");
-     /* Change l'état de $utilisateur pour le rendre manipulable */
-     $utilisateur = $utilisateur->fetch();
 ?>
 <?php   
     /* On appelle le head qui gère toutes infos relative à la page */

@@ -9,12 +9,7 @@
     }
     /* Importation des fonctions nécessaires à la page */
     require('functions.php');
-     require('connexion-bdd.php');
-    /* */
-    $utilisateur = $bdd->query("SELECT * FROM utilisateur WHERE id=$id");
-    /* Change l'état de $utilisateur pour le rendre manipulable */
-    $utilisateur = $utilisateur->fetch();
-    $affichageEmoji = $utilisateur['affichageemoji'];
+    require('connexion-bdd.php');
 
     /* Récupération du mois et de l'année */
     $annee_actuelle = isset($_GET["annee"]) ? $_GET['annee'] : date("Y");
