@@ -9,7 +9,7 @@
                     <li><?=bonjourAleatoire($utilisateur)?></li>
                     <li></li>
                     <li>Activer les Emojis
-                        <input type="checkbox" <?php if($affichageEmoji == true){echo "checked";}?> id="affichage-emoji" />
+                        <input type="checkbox" <?php if($affichageEmoji){echo "checked";}?> id="affichage-emoji" />
                         <label onclick="modficationEtatEmoji()" for="affichage-emoji"><span class="ui"></span></label> 
                     </li>
                     <li><a href="modification-humeur.php">Personnaliser vos humeurs</a></li>

@@ -27,12 +27,7 @@
     /* On appelle le head qui gère toutes infos relative à la page */
     include('head.php');
 ?>
-<style>
-    <?php 
-        /* Récupération des couleurs personnalisées en fonction des humeurs de l'utilisateur */
-        miseEnPlaceCouleur($bdd, $utilisateur[id]);
-    ?>
-</style>
+ 
 <body>
     <div class="conteneur">
         <?php 
