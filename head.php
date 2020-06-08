@@ -9,8 +9,18 @@
     <title>Year in Pixels | <?=$pseudo?></title>
     <style>
     <?php 
-        /* Récupération des couleurs personnalisées en fonction des humeurs de l'utilisateur */
-        miseEnPlaceCouleur($bdd, $utilisateur[id]);
+
+        /* Permet de récupérer les couleurs personnalisées de chacun */
+        $couleurs = $bdd->prepare("SELECT * FROM humeur WHERE utilisateur_id = :idutilisateur");
+        $couleurs->execute(array(
+            ':idutilisateur' => $id));
+        $compteur = 0;
+        echo ":root{ \n     --color-background: #fff8ed; \n     --color-text: #333333; \n     --color-0: #ffffff; \n";
+        foreach($couleurs as $humeur){
+            $compteur ++;
+            echo "     --color-".$compteur.": #".$humeur[couleur]."; \n";
+        }
+        echo "} \n";
     ?>
 </style>    
 </head>

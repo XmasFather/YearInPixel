@@ -33,7 +33,19 @@
             <form action="envoi-humeur.php?date-du-jour=<?=$datedujour?>" method="post">
                 <ul class="selection-humeur-du-jour">
                     <?php
-                        choixHumeur($bdd, $id);
+                        $couleurs = $bdd->prepare("SELECT * FROM humeur WHERE utilisateur_id = :idutilisateur");
+                        $couleurs->execute(array(
+                            ':idutilisateur' => $id));
+                        $compteur = 0;
+                        foreach($couleurs as $humeur){
+                            $compteur ++;
+                            echo "<li> \n";
+                            echo "<input type=\"radio\" id=\"".$humeur[intitule]."\" name=\"humeur\" value=\"".$humeur['id']."\">\n";
+                            echo "<label for=\"".$humeur[intitule]."\"> \n";
+                            echo "  <div class=\"carre-couleur-humeur couleur-humeur-".$compteur."\"></div> ".$humeur[intitule]."\n";
+                            echo "</label>";
+                            echo "</li> \n"; 
+                        }
                     ?>
                 </ul>
                 <h3>Quel emoji représente le mieux votre journée ?</h3>

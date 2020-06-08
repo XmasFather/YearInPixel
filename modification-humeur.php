@@ -28,7 +28,18 @@
             </header>
             <form action="envoi-modification-humeur.php" method="post">
             <?php
-                affichageModificationHumeur($bdd, $id);
+                /* Récupération des humeurs de l'utilisateur afin de pouvoir la modifier */
+                $couleurs = $bdd->prepare("SELECT * FROM humeur WHERE utilisateur_id = :idutilisateur");
+                $couleurs->execute(array(
+                    ':idutilisateur' => $id));
+                $compteur = 0;
+                foreach($couleurs as $humeur){
+                    $compteur ++;
+                    echo "<div class=\"humeur-a-modifier\">\n";
+                    echo "<input type=\"color\" class=\"input-couleur\" id=\"couleur-".$compteur."\" name=\"couleur-".$compteur."\" value=\"#".$humeur[couleur]."\">\n";
+                    echo "<input type=\"text\" class=\"input-humeur\" id=\"humeur-".$compteur."\" name=\"humeur-".$compteur."\" value=\"".$humeur[intitule]."\"   maxlength=\"20\" >\n";
+                    echo "</div>\n";
+                }
             ?>
             <input class="bouton-modification bouton-humeur" type="submit" value="Enregistrer vos humeurs"/>
             </form>
