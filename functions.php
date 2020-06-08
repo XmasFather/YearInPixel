@@ -11,13 +11,7 @@
         echo "</ul> \n";
     }
 
-    /* Affichage d'un bonjour aléatoire */
 
-    function bonjourAleatoire($utilisateur){
-        $listeBonjour = array("Hey", "Salut", "Bonjour", "Ouh", "Wesh");
-        $bonjour = array_rand($listeBonjour, 1);
-        echo "<h3 class=\"bonjour\">".$listeBonjour[$bonjour]." ".$utilisateur[pseudo]." !"."</h3>";
-    }
 /*
     function genererMois2($mois_actuel, $annee_actuelle){
 
