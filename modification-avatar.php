@@ -28,7 +28,22 @@
         </header>
         <form class="liste-avatars" action="envoi-modification-avatar.php" method="post">
             <?php
-                affichageAvatar("avatars", $utilisateur);
+                /* Affichage le contenu du dossier des avatars sous forme de liste*/ 
+                $avatars = scandir("avatars");
+                for($i=2; $i<count($avatars); $i++){
+                    if ($utilisateur[avatar] == $avatars[$i]){
+                        echo "<label>";
+                        echo "<input type=\"radio\" checked=\"checked\" name=\"avatar\" value=\"".$avatars[$i]."\">\n";
+                        echo "<img src=\"avatars/".$avatars[$i]."\" alt=\"".$avatars[$i]."\">\n";
+                        echo "</label>";
+                    }
+                    else{
+                        echo "<label>";
+                        echo "<input type=\"radio\" name=\"avatar\" value=\"".$avatars[$i]."\">\n";
+                        echo "<img src=\"avatars/".$avatars[$i]."\" alt=\"".$avatars[$i]."\">\n";
+                        echo "</label>";
+                    }            
+                }
             ?>
             <input class="bouton-modification bouton-avatar" type="submit" value="Modifier votre Avatar"/>
         </form >
