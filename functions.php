@@ -11,21 +11,6 @@
         echo "</ul> \n";
     }
 
-
-    function choixHumeur($bdd, $idUtilisateur){
-        $couleurs = $bdd->query("SELECT * FROM humeur WHERE utilisateur_id = $idUtilisateur");
-        $compteur = 0;
-        foreach($couleurs as $humeur){
-            $compteur ++;
-            echo "<li> \n";
-            echo "<input type=\"radio\" id=\"".$humeur[intitule]."\" name=\"humeur\" value=\"".$humeur['id']."\">\n";
-            echo "<label for=\"".$humeur[intitule]."\"> \n";
-            echo "  <div class=\"carre-couleur-humeur couleur-humeur-".$compteur."\"></div> ".$humeur[intitule]."\n";
-            echo "</label>";
-            echo "</li> \n"; 
-        }
-    }
-    
     /* Affichage d'un bonjour aléatoire */
 
     function bonjourAleatoire($utilisateur){
