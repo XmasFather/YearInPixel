@@ -13,7 +13,7 @@
         /* Permet de récupérer les couleurs personnalisées de chacun */
         $couleurs = $bdd->prepare("SELECT * FROM humeur WHERE utilisateur_id = :idutilisateur");
         $couleurs->execute(array(
-            ':idutilisateur' => $utilisateur[id]));
+            ':idutilisateur' => $id));
         $compteur = 0;
         echo ":root{ \n     --color-background: #fff8ed; \n     --color-text: #333333; \n     --color-0: #ffffff; \n";
         foreach($couleurs as $humeur){
