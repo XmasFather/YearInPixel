@@ -15,5 +15,5 @@
         'avatar' => $_POST['avatar'],
         'id' => $id));
         
-    header('location:accueil.php');
+    header('location:index.php');
     exit();

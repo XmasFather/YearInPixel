@@ -27,5 +27,5 @@
             'emoji' => $_POST['emoji']
         ));
     }    
-    header('location:accueil.php');
+    header('location:index.php');
     exit();

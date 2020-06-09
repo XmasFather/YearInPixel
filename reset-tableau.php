@@ -15,5 +15,5 @@
     $req->execute(array(
         'id' => $id)); 
 
-    header('location:accueil.php');
+    header('location:index.php');
     exit();

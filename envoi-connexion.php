@@ -27,7 +27,7 @@ $isPasswordCorrect = password_verify($_POST['motdepasse'], $resultat['motdepasse
         session_start();
         $_SESSION['id'] = $resultat['id'];
         $_SESSION['pseudo'] = $pseudo;
-        header('location:accueil.php');
+        header('location:index.php');
         exit();
         echo 'Vous êtes connecté !';
         

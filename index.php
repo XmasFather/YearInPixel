@@ -56,7 +56,7 @@
             
 
 
-            <a href="accueil.php?mois=<?=$mois_precedent?>&amp;annee=<?=$annee_precedente?>" class="centrer-elmt largeur-icone">
+            <a href="index.php?mois=<?=$mois_precedent?>&amp;annee=<?=$annee_precedente?>" class="centrer-elmt largeur-icone">
                 <svg xmlns="http://www.w3.org/2000/svg" width="43.612" height="35.504" viewBox="0 0 43.612 35.504">
                     <rect id="Rectangle_2" data-name="Rectangle 2" width="11.311" height="11.311" transform="translate(12.91 11.899)" class="fill-1"/>
                     <rect id="Rectangle_3" data-name="Rectangle 3" width="11.311" height="11.311" transform="translate(22.606 11.899)" class="fill-2"/>
@@ -95,7 +95,7 @@
             ?>
                 <h2 class="centrer-txt"><?=$mois_fr[$mois_actuel]?> <?=$annee_actuelle?> </h2>
 
-            <a href="accueil.php?mois=<?=$mois_suivant?>&amp;annee=<?=$annee_suivante?>"  class="centrer-elmt largeur-icone">
+            <a href="index.php?mois=<?=$mois_suivant?>&amp;annee=<?=$annee_suivante?>"  class="centrer-elmt largeur-icone">
                 <svg xmlns="http://www.w3.org/2000/svg" width="44.319" height="36.211" viewBox="0 0 44.319 36.211">
                     <rect id="Rectangle_5" data-name="Rectangle 5" width="11.311" height="11.311" transform="translate(30.702 23.958) rotate(180)" class="fill-1"/>
                     <rect id="Rectangle_6" data-name="Rectangle 6" width="11.311" height="11.311" transform="translate(21.006 23.958) rotate(180)" class="fill-2"/>
