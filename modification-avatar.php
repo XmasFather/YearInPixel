@@ -45,7 +45,7 @@
                     }            
                 }
             ?>
-            <input class="bouton-modification bouton-avatar" type="submit" value="Modifier votre Avatar"/>
+            <input class="bouton bouton-avatar" type="submit" value="Modifier votre Avatar"/>
         </form >
     </main>
     <?php 

@@ -30,7 +30,7 @@
             <input type="password" name="motdepasse"/>
             <p>confirmation du mot de passe</p>
             <input type="password" name="confirmation-mot-de-passe"/>
-            <input class="bouton-submit" type="submit" value="créer mon compte"/>
+            <input class="bouton" type="submit" value="créer mon compte"/>
         </form>
    </main>
    <?php 

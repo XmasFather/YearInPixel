@@ -85,7 +85,7 @@
 
                 <input readonly type="text" id="emoji-selectionne-affichage" name="emoji" maxlength="1">
 
-                <input class="bouton-modification bouton-humeur" type="submit" value="Valider"/>
+                <input class="bouton bouton-humeur" type="submit" value="Valider"/>
             </form>
             
         </main>

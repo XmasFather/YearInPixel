@@ -21,7 +21,7 @@
             <input type="text" name="pseudo"/>
             <p>mot de passe</p>
             <input type="password" name="motdepasse"/>
-            <input class="bouton-submit" type="submit" value="connexion"/>
+            <input class="bouton" type="submit" value="connexion"/>
             <div>
                 <p>Pas encore inscrit ? clique <a href="creation-compte.php">ici</a></p>
             </div>
