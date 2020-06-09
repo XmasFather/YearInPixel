@@ -16,8 +16,11 @@
 </head>
 <body>
     <header class="header-principal">
-        <h1>Year In <span class="couleur-1">P</span><span class="couleur-2">i</span><span class="couleur-3">x</span><span class="couleur-4">e</span><span class="couleur-5">l</span><span class="couleur-6">s</span>
-        </h1>
+        <h1>
+            <a href="./accueil.php">
+                Year In <span class="couleur-1">P</span><span class="couleur-2">i</span><span class="couleur-3">x</span><span class="couleur-4">e</span><span class="couleur-5">l</span><span class="couleur-6">s</span>
+            </a>
+        </h1>  
     </header> 
     <main class="main-compte">
         <h2 class="titre-compte">créer un compte</h2>

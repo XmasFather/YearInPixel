@@ -503,9 +503,10 @@ main{
 	font-size: 1.5em;
 }
 
-.bouton:active {
+.bouton:active, .bouton:hover {
 	background-color:#333333;
 	color:white;
+	cursor: pointer;
 }
 
 .bouton-reset-humeurs{
@@ -914,7 +915,7 @@ main{
 }
 
 .formulaire-compte {
-    width: 180px;
+    width: 200px;
     margin: auto;
     margin-top: 60px;
     text-transform: uppercase;
