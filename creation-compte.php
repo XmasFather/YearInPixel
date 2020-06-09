@@ -11,7 +11,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="color.css">
     <link rel="stylesheet" href="master.css">
-    <link rel="stylesheet" href="compte-utilisateur.css">
     <link rel="icon" href="favicon.ico" />
     <title>Year in Pixel | Création de compte</title>
 </head>
