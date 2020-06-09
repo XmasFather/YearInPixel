@@ -44,7 +44,7 @@
             <input class="bouton bouton-humeur" type="submit" value="Enregistrer vos humeurs"/>
             </form>
 
-            <a href="reset-humeurs.php" class="bouton bouton-lien-modification">Remise à zéro des couleurs</a>
+            <a href="reset-humeurs.php" class="bouton bouton-reset-humeurs">Remise à zéro des couleurs</a>
             
         </main>
         <?php 
