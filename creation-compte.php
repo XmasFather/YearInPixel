@@ -26,13 +26,13 @@
         <h2 class="titre-compte">créer un compte</h2>
         <form class="formulaire-compte" name="formulaire-creation-compte" action="envoi-creation-compte.php" method="post">
             <p>adresse mail</p>
-            <input type="text" name="email"/>
+            <input type="text" name="email" placeholder="Adresse mail"/>
             <p>identifiant</p>
-            <input type="text" name="pseudo"/>
+            <input type="text" name="pseudo" placeholder="Identifiant"/>
             <p>mot de passe</p>
-            <input type="password" name="motdepasse"/>
+            <input type="password" name="motdepasse" placeholder="Mot de passe"/>
             <p>confirmation du mot de passe</p>
-            <input type="password" name="confirmation-mot-de-passe"/>
+            <input type="password" name="confirmation-mot-de-passe" placeholder="Confirmer votre mot de passe"/>
             <input class="bouton" type="submit" value="créer mon compte"/>
         </form>
    </main>

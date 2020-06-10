@@ -24,9 +24,8 @@ else
 $isPasswordCorrect = password_verify($_POST['motdepasse'], $resultat['motdepasse']);
 {
     if ($isPasswordCorrect) {
-        session_start();
-        $_SESSION['id'] = $resultat['id'];
-        $_SESSION['pseudo'] = $pseudo;
+        setcookie('id', $resultat['id'], time() + 365*24*3600, null, null, false, true);
+        setcookie('pseudo', $pseudo, time() + 365*24*3600, null, null, false, true);
         header('location:index.php');
         exit();
         echo 'Vous êtes connecté !';

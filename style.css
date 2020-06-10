@@ -896,7 +896,7 @@ main{
 }
 
 
-/* Style Page d'index à modifier */
+/* Style Page d'accueil à modifier */
 
 .titre-compte {
     height: 40px;
@@ -915,7 +915,7 @@ main{
 }
 
 .formulaire-compte {
-    width: 200px;
+    width: 300px;
     margin: auto;
     margin-top: 60px;
     text-transform: uppercase;
@@ -934,3 +934,28 @@ main{
     font-family: "VT323";
     font-size: 1em;
 }
+
+
+.formulaire-compte input[type = "text"],.formulaire-compte input[type = "password"]{
+	outline: none;
+	border:0;
+	background: #FFFFFF;
+	display: block;
+	margin: 20px auto;
+	text-align: center;
+	border: 2px solid var(--color-text);
+	/*border-image: conic-gradient(var(--color-1), var(--color-2), var(--color-3), var(--color-4), var(--color-5), var(--color-6)) 1;*/
+	padding: 14px 10px;
+	width: 200px;
+	color: var(--color-text);
+	transition: 0.25s;
+  }
+  .formulaire-compte input[type = "text"]:focus,.formulaire-compte input[type = "password"]:focus{
+	width: 250px;
+	border: 2px solid var(--color-text);
+	border-image: conic-gradient(var(--color-1), var(--color-2), var(--color-3), var(--color-4), var(--color-5), var(--color-6)) 1;
+  }
+
+  .formulaire-compte input::placeholder{
+	  font-size: 0.8em;
+  }

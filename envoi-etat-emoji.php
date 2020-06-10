@@ -1,6 +1,6 @@
 <?php
-    session_start();
-    $id = $_SESSION['id'];
+    
+    $id = $_COOKIE['id'];
     require('functions.php');
     require('connexion-bdd.php');
     require('utilisateur.php'); 

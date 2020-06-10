@@ -1,7 +1,7 @@
 <?php
-    session_start();
-    $id = $_SESSION['id'];
-    $pseudo = $_SESSION['pseudo'];
+    
+    $id = $_COOKIE['id'];
+    $pseudo = $_COOKIE['pseudo'];
     /* Importation des fonctions nécessaires à la page */
     require('functions.php');    
     require('connexion-bdd.php');
@@ -44,7 +44,7 @@
             <input class="bouton bouton-humeur" type="submit" value="Enregistrer vos humeurs"/>
             </form>
 
-            <a href="reset-humeurs.php" class="bouton bouton-reset-humeurs">Remise à zéro des couleurs</a>
+            <a href="reset-humeurs.php" class="bouton bouton-reset-humeurs" onclick="return confirm('&Ecirc;tes-vous sûr de vouloir réinitialiser vos humeurs ?')">Remise à zéro des couleurs</a>
             
         </main>
         <?php 

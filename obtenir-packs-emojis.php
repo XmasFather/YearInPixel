@@ -1,7 +1,7 @@
 <?php
-    session_start();
-    $id = $_SESSION['id'];
-    $pseudo = $_SESSION['pseudo'];
+    
+    $id = $_COOKIE['id'];
+    $pseudo = $_COOKIE['pseudo'];
     /* Si on a pas d'utilisateur on est redirigé sur la page de connexion */
     if($id == NULL){
         header('location:connexion.php');
