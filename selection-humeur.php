@@ -1,7 +1,7 @@
 <?php
-    session_start();
-    $id = $_SESSION['id'];
-    $pseudo = $_SESSION['pseudo'];
+    
+    $id = $_COOKIE['id'];
+    $pseudo = $_COOKIE['pseudo'];
     /* Importation des fonctions nécessaires à la page */
     require('functions.php');    
     require('connexion-bdd.php');
