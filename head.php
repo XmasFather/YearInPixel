@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="favicon.ico" />
-    <title>Year in Pixels | <?=$pseudo?></title>
+    <title>Year in Pixels | <?=$username?></title>
     <style>
     <?php 
 
@@ -18,7 +18,7 @@
         echo ":root{ \n     --color-background: #fff8ed; \n     --color-text: #333333; \n     --color-0: #ffffff; \n";
         foreach($couleurs as $humeur){
             $compteur ++;
-            echo "     --color-".$compteur.": #".$humeur[couleur]."; \n";
+            echo "     --color-".$compteur.": #".$humeur['couleur']."; \n";
         }
         echo "} \n";
     ?>

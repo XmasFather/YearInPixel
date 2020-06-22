@@ -3,12 +3,12 @@
     require('functions.php');
     require('connexion-bdd.php');
 
-$pseudo = $_POST['pseudo'];
+$username = $_POST['username'];
 
 //  Récupération de l'utilisateur et de son pass hashé
-$req = $bdd->prepare("SELECT id, motdepasse FROM utilisateur WHERE pseudo = :pseudo");
+$req = $bdd->prepare("SELECT id, motdepasse FROM utilisateur WHERE username = :username");
 $req->execute(array(
-    'pseudo' => $pseudo));
+    'username' => $username));
 $resultat = $req->fetch();
 
 // Comparaison du pass envoyé via le formulaire avec la base
@@ -25,7 +25,7 @@ $isPasswordCorrect = password_verify($_POST['motdepasse'], $resultat['motdepasse
 {
     if ($isPasswordCorrect) {
         setcookie('id', $resultat['id'], time() + 365*24*3600, null, null, false, true);
-        setcookie('pseudo', $pseudo, time() + 365*24*3600, null, null, false, true);
+        setcookie('username', $username, time() + 365*24*3600, null, null, false, true);
         header('location:index.php');
         exit();
         echo 'Vous êtes connecté !';

@@ -7,18 +7,18 @@
     $pass_hache = crypt($_POST['motdepasse']);
 
     $email = $_POST['email'];
-    $pseudo = $_POST['pseudo'];
+    $username = $_POST['username'];
 
     // Insertion
-    $req = $bdd->prepare('INSERT INTO utilisateur(email, pseudo, motdepasse) VALUES(:email, :pseudo, :motdepasse)');
+    $req = $bdd->prepare('INSERT INTO utilisateur(email, username, motdepasse) VALUES(:email, :username, :motdepasse)');
     $req->execute(array(
         'email' => $email,
-        'pseudo' => $pseudo,
+        'username' => $username,
         'motdepasse' => $pass_hache,));
 
-    $recuperationIdUtilisateur = $bdd->prepare("SELECT id FROM utilisateur WHERE pseudo = :pseudo");
+    $recuperationIdUtilisateur = $bdd->prepare("SELECT id FROM utilisateur WHERE username = :username");
     $recuperationIdUtilisateur->execute(array(
-        'pseudo' => $pseudo));
+        'username' => $username));
     $idUtilisateur = $recuperationIdUtilisateur->fetch();
 
     $valeurHumeurs = ['FF9FBB','E1C4FF','8BF9D0','FF8181','FFC84A','98FFFF'];

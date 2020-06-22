@@ -1,6 +1,6 @@
 <?php
     $id = $_COOKIE['id'];
-    $pseudo = $_COOKIE['pseudo'];
+    $username = $_COOKIE['username'];
     /* Si on a pas d'utilisateur on est redirigé sur la page de connexion */
     if($id == NULL){
         header('location:connexion.php');
@@ -12,7 +12,7 @@
     require('utilisateur.php'); 
 
     /* Récupération du mois et de l'année */
-    $annee_actuelle = isset($_GET["annee"]) ? $_GET['annee'] : date("Y");
+    $annee_actuelle = isset($_GET['annee']) ? $_GET['annee'] : date("Y");
 
     /* Set des valeurs à envoyer */
 

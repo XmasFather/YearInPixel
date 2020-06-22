@@ -6,7 +6,7 @@
         $compteur = 0;
         foreach($couleurs as $humeur){
             $compteur ++;
-            echo "  <li><div class=\"carre-couleur-humeur couleur-humeur-".$compteur."\"></div> ".$humeur[intitule]."</li> \n";
+            echo "  <li><div class=\"carre-couleur-humeur couleur-humeur-".$compteur."\"></div> ".$humeur['intitule']."</li> \n";
         }
         echo "</ul> \n";
     }

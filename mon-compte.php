@@ -1,7 +1,7 @@
 <?php
     
     $id = $_COOKIE['id'];
-    $pseudo = $_COOKIE['pseudo'];
+    $username = $_COOKIE['username'];
     /* Si on a pas d'utilisateur on est redirigé sur la page de connexion */
     if($id == NULL){
         header('location:connexion.php');
@@ -30,7 +30,7 @@
         <section class="info-compte">
             <h3>Mes informations</h3>
             <ul>
-                <li>Pseudo : <?=$utilisateur['pseudo']?></li>
+                <li>username : <?=$utilisateur['username']?></li>
                 <li>Mail : <?=$utilisateur['email']?></li>
                 <li>Credit : <?=$utilisateur['monnaie']?></li>
             </ul>
