@@ -36,6 +36,7 @@ if (isset($_POST['creation-compte-envoi'])){
     header("location: creation-compte.php?error=passwordcheck&mail=".$email."&username=".$username);
       exit();
   }
+  /* Début des requêtes vers la base pour vérifier si les informations sont déjà prises ou non */
 }
 else{
     echo "NOT Ok";
