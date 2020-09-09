@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="favicon.ico" />
-    <title>Year in Pixels | <?=$username?></title>
+    <title>Year in Pixels | <?=$utilisateur[username]?></title>
     <style>
     <?php 
 
