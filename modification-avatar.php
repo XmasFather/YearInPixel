@@ -1,7 +1,7 @@
 <?php
     
     $id = $_COOKIE['id'];
-    $pseudo = $_COOKIE['pseudo'];
+    $username = $_COOKIE['username'];
     /* Importation des fonctions nécessaires à la page */
     require('functions.php');    
     require('connexion-bdd.php');

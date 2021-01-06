@@ -21,7 +21,7 @@
         <h2 class="titre-compte">s'identifier</h2>
         <form class="formulaire-compte" name="formulaire-connexion" action="envoi-connexion.php" method="post">
             <p>identifiant</p>
-            <input type="text" name="pseudo" placeholder="Identifiant"/>
+            <input type="text" name="username" placeholder="Identifiant"/>
             <p>mot de passe</p>
             <input type="password" name="motdepasse" placeholder="Mot de passe"/>
             <input class="bouton" type="submit" value="connexion"/>

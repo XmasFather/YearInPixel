@@ -12,7 +12,7 @@
                 /* Affichage d'un bonjour aléatoire */
                 $listeBonjour = array("Hey", "Salut", "Bonjour", "Ouh", "Wesh");
                 $bonjour = array_rand($listeBonjour, 1);
-                echo "<h3 class=\"bonjour\">".$listeBonjour[$bonjour]." ".$utilisateur[pseudo]." !"."</h3>";
+                echo "<h3 class=\"bonjour\">".$listeBonjour[$bonjour]." ".$utilisateur[username]." !"."</h3>";
             ?></li>
             <li></li>
             <li>Activer les Emojis
